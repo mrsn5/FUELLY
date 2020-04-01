@@ -14,11 +14,8 @@ class MainPagerTab: BaseButtonBarPagerTabStripViewController<PagerTabCell> {
     override func viewDidLoad() {
         buttonBarItemSpec = ButtonBarItemSpec.nibFile(nibName: PagerTabCell.reuseID, bundle: Bundle(for: PagerTabCell.self), width: { _ in return 55.0 })
         
-        settings.style.buttonBarItemBackgroundColor = .primary()
-        settings.style.buttonBarItemTitleColor = .white
-        
-        buttonBarView.selectedBar.backgroundColor = .white
-        buttonBarView.backgroundColor = .primary()
+        settings.style.buttonBarBackgroundColor = .primary()
+        settings.style.selectedBarBackgroundColor = .white
         
         changeCurrentIndexProgressive = { (oldCell: PagerTabCell?, newCell: PagerTabCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
             guard changeCurrentIndex == true else { return }
@@ -37,5 +34,8 @@ class MainPagerTab: BaseButtonBarPagerTabStripViewController<PagerTabCell> {
         cell.iconImage.image = indicatorInfo.image?.withRenderingMode(.alwaysTemplate)
     }
     
+    @IBAction func addAction(_ sender: Any) {
+        
+    }
 }
 

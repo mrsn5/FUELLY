@@ -14,22 +14,22 @@ class RefillsController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
-        
-        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 10, left: 0, bottom: 200, right: 0)
-        
-        let myCollectionView: UICollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
-        myCollectionView.dataSource = self
-        myCollectionView.delegate = self
-        myCollectionView.register(RefillCell.self, forCellWithReuseIdentifier: RefillCell.reuseID)
-        
-        myCollectionView.register(RefillCell.nib, forCellWithReuseIdentifier: RefillCell.reuseID)
-        myCollectionView.contentInset = .zero
-        
-        self.view.addSubview(myCollectionView)
+        setupCollectionView()
     }
 
+    
+    func setupCollectionView() {
+       let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 0, bottom: 200, right: 0)
+        
+        let collectionView: UICollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.register(RefillCell.nib, forCellWithReuseIdentifier: RefillCell.reuseID)
+        collectionView.contentInset = .zero
+        
+        self.view.addSubview(collectionView)
+    }
     
 }
 

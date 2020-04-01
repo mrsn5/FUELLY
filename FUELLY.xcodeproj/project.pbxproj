@@ -25,6 +25,8 @@
 		C3D0247F2434B536003D4D5C /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0247E2434B536003D4D5C /* UIColor+.swift */; };
 		C3D024822434BD9C003D4D5C /* PagerTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D024802434BD9C003D4D5C /* PagerTabCell.swift */; };
 		C3D024832434BD9C003D4D5C /* PagerTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D024812434BD9C003D4D5C /* PagerTabCell.xib */; };
+		C3D024862434C918003D4D5C /* StationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D024842434C918003D4D5C /* StationCell.swift */; };
+		C3D024872434C918003D4D5C /* StationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D024852434C918003D4D5C /* StationCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,8 @@
 		C3D0247E2434B536003D4D5C /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		C3D024802434BD9C003D4D5C /* PagerTabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagerTabCell.swift; sourceTree = "<group>"; };
 		C3D024812434BD9C003D4D5C /* PagerTabCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PagerTabCell.xib; sourceTree = "<group>"; };
+		C3D024842434C918003D4D5C /* StationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationCell.swift; sourceTree = "<group>"; };
+		C3D024852434C918003D4D5C /* StationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StationCell.xib; sourceTree = "<group>"; };
 		E68EE842A1EB01A1D7518E77 /* Pods_FUELLY.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FUELLY.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -176,6 +180,8 @@
 				C3D0247B2434975C003D4D5C /* RefillCell.xib */,
 				C3D024802434BD9C003D4D5C /* PagerTabCell.swift */,
 				C3D024812434BD9C003D4D5C /* PagerTabCell.xib */,
+				C3D024842434C918003D4D5C /* StationCell.swift */,
+				C3D024852434C918003D4D5C /* StationCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -240,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3D024872434C918003D4D5C /* StationCell.xib in Resources */,
 				C3D0245A2433D811003D4D5C /* LaunchScreen.storyboard in Resources */,
 				C3D024832434BD9C003D4D5C /* PagerTabCell.xib in Resources */,
 				C3D0247D2434975C003D4D5C /* RefillCell.xib in Resources */,
@@ -305,6 +312,7 @@
 				C3D024502433D80F003D4D5C /* SceneDelegate.swift in Sources */,
 				C3D0246F2433EEB9003D4D5C /* Station.swift in Sources */,
 				C3D024822434BD9C003D4D5C /* PagerTabCell.swift in Sources */,
+				C3D024862434C918003D4D5C /* StationCell.swift in Sources */,
 				C3D02477243494B1003D4D5C /* RefillsController.swift in Sources */,
 				C3D0247F2434B536003D4D5C /* UIColor+.swift in Sources */,
 				C3D0246D2433EE9B003D4D5C /* Refill.swift in Sources */,
