@@ -17,10 +17,10 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FHD-KM-KqK">
-                        <rect key="frame" x="0.0" y="0.0" width="427" height="179"/>
+                        <rect key="frame" x="8" y="8" width="411" height="163"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WOG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Nw-5X-Zab">
-                                <rect key="frame" x="16" y="16" width="395" height="36"/>
+                                <rect key="frame" x="16" y="16" width="379" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="KHb-5I-9yx"/>
                                     <constraint firstAttribute="height" constant="36" id="g4g-NC-1oi"/>
@@ -30,7 +30,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="проспект Романа Шухевича, 3 проспект Романа Шухевича, 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FAR-gg-HH9">
-                                <rect key="frame" x="16" y="52" width="395" height="16"/>
+                                <rect key="frame" x="16" y="52" width="379" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="aww-Xq-DXL"/>
                                 </constraints>
@@ -39,7 +39,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₴ 264,00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wy6-8b-0XL">
-                                <rect key="frame" x="304" y="127" width="107" height="36"/>
+                                <rect key="frame" x="288" y="111" width="107" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="3VT-yc-ATg"/>
                                 </constraints>
@@ -48,19 +48,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₴ 26,40 × 10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M04-0j-0RH">
-                                <rect key="frame" x="308" y="105.5" width="103" height="21.5"/>
+                                <rect key="frame" x="292" y="89.5" width="103" height="21.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15:32" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMC-BK-jiU">
-                                <rect key="frame" x="16" y="141" width="42" height="22"/>
+                                <rect key="frame" x="16" y="125" width="42" height="22"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
                                 <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QyR-zM-Jtq">
-                                <rect key="frame" x="308" y="129" width="103" height="1"/>
+                                <rect key="frame" x="292" y="113" width="103" height="1"/>
                                 <color key="backgroundColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="qaG-GW-aMh"/>
@@ -91,12 +91,15 @@
             </view>
             <constraints>
                 <constraint firstItem="FHD-KM-KqK" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Ei8-ux-L7b"/>
-                <constraint firstAttribute="trailing" secondItem="FHD-KM-KqK" secondAttribute="trailing" id="UUK-ro-gul"/>
-                <constraint firstItem="FHD-KM-KqK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="sa5-c2-vyY"/>
+                <constraint firstAttribute="trailing" secondItem="FHD-KM-KqK" secondAttribute="trailing" constant="8" id="UUK-ro-gul"/>
+                <constraint firstItem="FHD-KM-KqK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="sa5-c2-vyY"/>
                 <constraint firstAttribute="bottom" secondItem="FHD-KM-KqK" secondAttribute="bottom" id="yFw-NI-4fc"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="427" height="179"/>
+            <connections>
+                <outlet property="cardView" destination="FHD-KM-KqK" id="OC5-87-b0q"/>
+            </connections>
             <point key="canvasLocation" x="-2.1739130434782612" y="100.78125"/>
         </collectionViewCell>
     </objects>

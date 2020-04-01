@@ -10,9 +10,13 @@ import UIKit
 
 class StationCell: UICollectionViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+    static let reuseID = String(describing: StationCell.self)
+    static let nib = UINib(nibName: String(describing: StationCell.self), bundle: nil)
 
+    @IBOutlet weak var cardView: UIView!
+    
+    override func layoutSubviews() {
+        cardView.clipsToBounds = true
+        cardView.layer.cornerRadius = 10
+    }
 }

@@ -12,9 +12,11 @@ class RefillCell: UICollectionViewCell {
 
     static let reuseID = String(describing: RefillCell.self)
     static let nib = UINib(nibName: String(describing: RefillCell.self), bundle: nil)
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
 
+    @IBOutlet weak var cardView: UIView!
+    
+    override func layoutSubviews() {
+        cardView.clipsToBounds = true
+        cardView.layer.cornerRadius = 10
+    }
 }

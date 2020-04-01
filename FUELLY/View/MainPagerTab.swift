@@ -35,7 +35,7 @@ class MainPagerTab: BaseButtonBarPagerTabStripViewController<PagerTabCell> {
     }
     
     @IBAction func addAction(_ sender: Any) {
-        
+        print("add")
     }
 }
 

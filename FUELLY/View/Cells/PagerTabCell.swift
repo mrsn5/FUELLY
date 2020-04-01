@@ -10,7 +10,6 @@ import UIKit
 
 class PagerTabCell: UICollectionViewCell {
     
-    
     static let reuseID = String(describing: PagerTabCell.self)
     static let nib = UINib(nibName: String(describing: PagerTabCell.self), bundle: nil)
     

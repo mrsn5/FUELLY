@@ -12,7 +12,6 @@ import XLPagerTabStrip
 class RefillsController: UIViewController {
 
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         setupCollectionView()
     }
@@ -27,6 +26,7 @@ class RefillsController: UIViewController {
         collectionView.delegate = self
         collectionView.register(RefillCell.nib, forCellWithReuseIdentifier: RefillCell.reuseID)
         collectionView.contentInset = .zero
+        collectionView.backgroundColor = .primaryLight()
         
         self.view.addSubview(collectionView)
     }
@@ -61,6 +61,4 @@ extension RefillsController: IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return IndicatorInfo(image: UIImage(named: "report_card"))
     }
-    
-    
 }
