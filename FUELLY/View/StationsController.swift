@@ -19,7 +19,7 @@ class StationsController: UIViewController, IndicatorInfoProvider {
     }
     
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-      return IndicatorInfo(title: "Stations")
+      return IndicatorInfo(image: UIImage(named: "combo_chart"))
     }
 
 }

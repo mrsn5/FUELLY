@@ -9,16 +9,33 @@
 import UIKit
 import XLPagerTabStrip
 
-class MainPagerTab: ButtonBarPagerTabStripViewController {
+class MainPagerTab: BaseButtonBarPagerTabStripViewController<PagerTabCell> {
 
     override func viewDidLoad() {
+        buttonBarItemSpec = ButtonBarItemSpec.nibFile(nibName: PagerTabCell.reuseID, bundle: Bundle(for: PagerTabCell.self), width: { _ in return 55.0 })
+        
+        settings.style.buttonBarItemBackgroundColor = .primary()
+        settings.style.buttonBarItemTitleColor = .white
+        
+        buttonBarView.selectedBar.backgroundColor = .white
+        buttonBarView.backgroundColor = .primary()
+        
+        changeCurrentIndexProgressive = { (oldCell: PagerTabCell?, newCell: PagerTabCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
+            guard changeCurrentIndex == true else { return }
+            oldCell?.iconImage.tintColor = .primaryLight()
+            newCell?.iconImage.tintColor = .white
+        }
+        
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
     override public func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
       return [RefillsController(), StationsController()]
     }
 
+    override func configure(cell: PagerTabCell, for indicatorInfo: IndicatorInfo) {
+        cell.iconImage.image = indicatorInfo.image?.withRenderingMode(.alwaysTemplate)
+    }
+    
 }
 

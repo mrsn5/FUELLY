@@ -12,11 +12,12 @@ import XLPagerTabStrip
 class RefillsController: UIViewController {
 
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 100, right: 0)
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 0, bottom: 200, right: 0)
         
         let myCollectionView: UICollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
         myCollectionView.dataSource = self
@@ -26,9 +27,9 @@ class RefillsController: UIViewController {
         myCollectionView.register(RefillCell.nib, forCellWithReuseIdentifier: RefillCell.reuseID)
         myCollectionView.contentInset = .zero
         
-        myCollectionView.backgroundColor = UIColor.red
         self.view.addSubview(myCollectionView)
     }
+
     
 }
 
@@ -48,7 +49,7 @@ extension RefillsController: UICollectionViewDataSource, UICollectionViewDelegat
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.size.width, height: 100)
+        return CGSize(width: collectionView.frame.size.width, height: 150)
     }
     
     
@@ -58,6 +59,8 @@ extension RefillsController: UICollectionViewDataSource, UICollectionViewDelegat
 
 extension RefillsController: IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-      return IndicatorInfo(title: "Refills")
+        return IndicatorInfo(image: UIImage(named: "report_card"))
     }
+    
+    
 }

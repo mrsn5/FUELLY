@@ -22,6 +22,9 @@
 		C3D02477243494B1003D4D5C /* RefillsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D02475243494B1003D4D5C /* RefillsController.swift */; };
 		C3D0247C2434975C003D4D5C /* RefillCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0247A2434975C003D4D5C /* RefillCell.swift */; };
 		C3D0247D2434975C003D4D5C /* RefillCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D0247B2434975C003D4D5C /* RefillCell.xib */; };
+		C3D0247F2434B536003D4D5C /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0247E2434B536003D4D5C /* UIColor+.swift */; };
+		C3D024822434BD9C003D4D5C /* PagerTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D024802434BD9C003D4D5C /* PagerTabCell.swift */; };
+		C3D024832434BD9C003D4D5C /* PagerTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D024812434BD9C003D4D5C /* PagerTabCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +46,9 @@
 		C3D02475243494B1003D4D5C /* RefillsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefillsController.swift; sourceTree = "<group>"; };
 		C3D0247A2434975C003D4D5C /* RefillCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefillCell.swift; sourceTree = "<group>"; };
 		C3D0247B2434975C003D4D5C /* RefillCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RefillCell.xib; sourceTree = "<group>"; };
+		C3D0247E2434B536003D4D5C /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		C3D024802434BD9C003D4D5C /* PagerTabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagerTabCell.swift; sourceTree = "<group>"; };
+		C3D024812434BD9C003D4D5C /* PagerTabCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PagerTabCell.xib; sourceTree = "<group>"; };
 		E68EE842A1EB01A1D7518E77 /* Pods_FUELLY.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FUELLY.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -114,9 +120,9 @@
 			isa = PBXGroup;
 			children = (
 				C3D0247924349736003D4D5C /* Cells */,
-				C3D024692433EB1E003D4D5C /* StationsController.swift */,
 				C3D024512433D80F003D4D5C /* MainPagerTab.swift */,
 				C3D02475243494B1003D4D5C /* RefillsController.swift */,
+				C3D024692433EB1E003D4D5C /* StationsController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -158,6 +164,7 @@
 		C3D02474243490ED003D4D5C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C3D0247E2434B536003D4D5C /* UIColor+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -167,6 +174,8 @@
 			children = (
 				C3D0247A2434975C003D4D5C /* RefillCell.swift */,
 				C3D0247B2434975C003D4D5C /* RefillCell.xib */,
+				C3D024802434BD9C003D4D5C /* PagerTabCell.swift */,
+				C3D024812434BD9C003D4D5C /* PagerTabCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -232,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3D0245A2433D811003D4D5C /* LaunchScreen.storyboard in Resources */,
+				C3D024832434BD9C003D4D5C /* PagerTabCell.xib in Resources */,
 				C3D0247D2434975C003D4D5C /* RefillCell.xib in Resources */,
 				C3D024572433D811003D4D5C /* Assets.xcassets in Resources */,
 				C3D024552433D80F003D4D5C /* Main.storyboard in Resources */,
@@ -294,7 +304,9 @@
 				C3D0244E2433D80F003D4D5C /* AppDelegate.swift in Sources */,
 				C3D024502433D80F003D4D5C /* SceneDelegate.swift in Sources */,
 				C3D0246F2433EEB9003D4D5C /* Station.swift in Sources */,
+				C3D024822434BD9C003D4D5C /* PagerTabCell.swift in Sources */,
 				C3D02477243494B1003D4D5C /* RefillsController.swift in Sources */,
+				C3D0247F2434B536003D4D5C /* UIColor+.swift in Sources */,
 				C3D0246D2433EE9B003D4D5C /* Refill.swift in Sources */,
 				C3D0247C2434975C003D4D5C /* RefillCell.swift in Sources */,
 			);
