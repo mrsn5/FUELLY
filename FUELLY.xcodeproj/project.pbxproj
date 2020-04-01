@@ -3,27 +3,47 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		463A397B02716E5546F7F535 /* Pods_FUELLY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E68EE842A1EB01A1D7518E77 /* Pods_FUELLY.framework */; };
 		C3D0244E2433D80F003D4D5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0244D2433D80F003D4D5C /* AppDelegate.swift */; };
 		C3D024502433D80F003D4D5C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0244F2433D80F003D4D5C /* SceneDelegate.swift */; };
-		C3D024522433D80F003D4D5C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D024512433D80F003D4D5C /* ViewController.swift */; };
+		C3D024522433D80F003D4D5C /* MainPagerTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D024512433D80F003D4D5C /* MainPagerTab.swift */; };
 		C3D024552433D80F003D4D5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3D024532433D80F003D4D5C /* Main.storyboard */; };
 		C3D024572433D811003D4D5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3D024562433D811003D4D5C /* Assets.xcassets */; };
 		C3D0245A2433D811003D4D5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3D024582433D811003D4D5C /* LaunchScreen.storyboard */; };
+		C3D0246A2433EB1E003D4D5C /* StationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D024692433EB1E003D4D5C /* StationsController.swift */; };
+		C3D0246D2433EE9B003D4D5C /* Refill.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0246C2433EE9B003D4D5C /* Refill.swift */; };
+		C3D0246F2433EEB9003D4D5C /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0246E2433EEB9003D4D5C /* Station.swift */; };
+		C3D0247124348F57003D4D5C /* RefillsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0247024348F57003D4D5C /* RefillsUseCase.swift */; };
+		C3D0247324349034003D4D5C /* ReffilsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0247224349034003D4D5C /* ReffilsViewModel.swift */; };
+		C3D02477243494B1003D4D5C /* RefillsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D02475243494B1003D4D5C /* RefillsController.swift */; };
+		C3D0247C2434975C003D4D5C /* RefillCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0247A2434975C003D4D5C /* RefillCell.swift */; };
+		C3D0247D2434975C003D4D5C /* RefillCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D0247B2434975C003D4D5C /* RefillCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17D71796A4A21441805B34CC /* Pods-FUELLY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FUELLY.debug.xcconfig"; path = "Target Support Files/Pods-FUELLY/Pods-FUELLY.debug.xcconfig"; sourceTree = "<group>"; };
+		B9CDCE30CDB6BE15CD246991 /* Pods-FUELLY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FUELLY.release.xcconfig"; path = "Target Support Files/Pods-FUELLY/Pods-FUELLY.release.xcconfig"; sourceTree = "<group>"; };
 		C3D0244A2433D80F003D4D5C /* FUELLY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FUELLY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3D0244D2433D80F003D4D5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3D0244F2433D80F003D4D5C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C3D024512433D80F003D4D5C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C3D024512433D80F003D4D5C /* MainPagerTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPagerTab.swift; sourceTree = "<group>"; };
 		C3D024542433D80F003D4D5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C3D024562433D811003D4D5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3D024592433D811003D4D5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3D0245B2433D811003D4D5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3D024692433EB1E003D4D5C /* StationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsController.swift; sourceTree = "<group>"; };
+		C3D0246C2433EE9B003D4D5C /* Refill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refill.swift; sourceTree = "<group>"; };
+		C3D0246E2433EEB9003D4D5C /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		C3D0247024348F57003D4D5C /* RefillsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefillsUseCase.swift; sourceTree = "<group>"; };
+		C3D0247224349034003D4D5C /* ReffilsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReffilsViewModel.swift; sourceTree = "<group>"; };
+		C3D02475243494B1003D4D5C /* RefillsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefillsController.swift; sourceTree = "<group>"; };
+		C3D0247A2434975C003D4D5C /* RefillCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefillCell.swift; sourceTree = "<group>"; };
+		C3D0247B2434975C003D4D5C /* RefillCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RefillCell.xib; sourceTree = "<group>"; };
+		E68EE842A1EB01A1D7518E77 /* Pods_FUELLY.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FUELLY.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +51,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				463A397B02716E5546F7F535 /* Pods_FUELLY.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5459E7DD88FAE901C3B4058B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				17D71796A4A21441805B34CC /* Pods-FUELLY.debug.xcconfig */,
+				B9CDCE30CDB6BE15CD246991 /* Pods-FUELLY.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8C1BE53499BF1571BADB3AF4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E68EE842A1EB01A1D7518E77 /* Pods_FUELLY.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C3D024412433D80F003D4D5C = {
 			isa = PBXGroup;
 			children = (
 				C3D0244C2433D80F003D4D5C /* FUELLY */,
 				C3D0244B2433D80F003D4D5C /* Products */,
+				5459E7DD88FAE901C3B4058B /* Pods */,
+				8C1BE53499BF1571BADB3AF4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +96,79 @@
 		C3D0244C2433D80F003D4D5C /* FUELLY */ = {
 			isa = PBXGroup;
 			children = (
-				C3D0244D2433D80F003D4D5C /* AppDelegate.swift */,
-				C3D0244F2433D80F003D4D5C /* SceneDelegate.swift */,
-				C3D024512433D80F003D4D5C /* ViewController.swift */,
+				C3D02474243490ED003D4D5C /* Extensions */,
+				C3D024662433DB52003D4D5C /* AppDelegate */,
+				C3D024622433DAEB003D4D5C /* Config */,
+				C3D024642433DAFC003D4D5C /* Model */,
+				C3D024632433DAF1003D4D5C /* ViewModel */,
+				C3D024612433DADF003D4D5C /* View */,
 				C3D024532433D80F003D4D5C /* Main.storyboard */,
 				C3D024562433D811003D4D5C /* Assets.xcassets */,
 				C3D024582433D811003D4D5C /* LaunchScreen.storyboard */,
 				C3D0245B2433D811003D4D5C /* Info.plist */,
 			);
 			path = FUELLY;
+			sourceTree = "<group>";
+		};
+		C3D024612433DADF003D4D5C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C3D0247924349736003D4D5C /* Cells */,
+				C3D024692433EB1E003D4D5C /* StationsController.swift */,
+				C3D024512433D80F003D4D5C /* MainPagerTab.swift */,
+				C3D02475243494B1003D4D5C /* RefillsController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C3D024622433DAEB003D4D5C /* Config */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		C3D024632433DAF1003D4D5C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C3D0247224349034003D4D5C /* ReffilsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C3D024642433DAFC003D4D5C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C3D0246C2433EE9B003D4D5C /* Refill.swift */,
+				C3D0246E2433EEB9003D4D5C /* Station.swift */,
+				C3D0247024348F57003D4D5C /* RefillsUseCase.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C3D024662433DB52003D4D5C /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				C3D0244D2433D80F003D4D5C /* AppDelegate.swift */,
+				C3D0244F2433D80F003D4D5C /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		C3D02474243490ED003D4D5C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C3D0247924349736003D4D5C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C3D0247A2434975C003D4D5C /* RefillCell.swift */,
+				C3D0247B2434975C003D4D5C /* RefillCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +178,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C3D0245E2433D811003D4D5C /* Build configuration list for PBXNativeTarget "FUELLY" */;
 			buildPhases = (
+				C4214AAB2AA126311F707DAB /* [CP] Check Pods Manifest.lock */,
 				C3D024462433D80F003D4D5C /* Sources */,
 				C3D024472433D80F003D4D5C /* Frameworks */,
 				C3D024482433D80F003D4D5C /* Resources */,
+				40B555A20DF31C1A2EA76297 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3D0245A2433D811003D4D5C /* LaunchScreen.storyboard in Resources */,
+				C3D0247D2434975C003D4D5C /* RefillCell.xib in Resources */,
 				C3D024572433D811003D4D5C /* Assets.xcassets in Resources */,
 				C3D024552433D80F003D4D5C /* Main.storyboard in Resources */,
 			);
@@ -133,14 +240,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		40B555A20DF31C1A2EA76297 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FUELLY/Pods-FUELLY-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FUELLY/Pods-FUELLY-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FUELLY/Pods-FUELLY-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4214AAB2AA126311F707DAB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FUELLY-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C3D024462433D80F003D4D5C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3D024522433D80F003D4D5C /* ViewController.swift in Sources */,
+				C3D0247324349034003D4D5C /* ReffilsViewModel.swift in Sources */,
+				C3D0246A2433EB1E003D4D5C /* StationsController.swift in Sources */,
+				C3D024522433D80F003D4D5C /* MainPagerTab.swift in Sources */,
+				C3D0247124348F57003D4D5C /* RefillsUseCase.swift in Sources */,
 				C3D0244E2433D80F003D4D5C /* AppDelegate.swift in Sources */,
 				C3D024502433D80F003D4D5C /* SceneDelegate.swift in Sources */,
+				C3D0246F2433EEB9003D4D5C /* Station.swift in Sources */,
+				C3D02477243494B1003D4D5C /* RefillsController.swift in Sources */,
+				C3D0246D2433EE9B003D4D5C /* Refill.swift in Sources */,
+				C3D0247C2434975C003D4D5C /* RefillCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +438,7 @@
 		};
 		C3D0245F2433D811003D4D5C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17D71796A4A21441805B34CC /* Pods-FUELLY.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +457,7 @@
 		};
 		C3D024602433D811003D4D5C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9CDCE30CDB6BE15CD246991 /* Pods-FUELLY.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
