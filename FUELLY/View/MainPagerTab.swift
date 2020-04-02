@@ -35,7 +35,7 @@ class MainPagerTab: BaseButtonBarPagerTabStripViewController<PagerTabCell> {
     }
     
     @IBAction func addAction(_ sender: Any) {
-        let newViewController = AddRefillController(nibName: "AddRefillController", bundle: nil)
+        let newViewController = PickStationView(nibName: "PickStationView", bundle: nil)
         self.present(newViewController, animated: true, completion: nil)
     }
 }

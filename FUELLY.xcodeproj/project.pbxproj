@@ -14,6 +14,9 @@
 		C38DD0AB2435FF770079AAC5 /* AddRefillController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C38DD0A92435FF770079AAC5 /* AddRefillController.xib */; };
 		C38DD0B1243617F70079AAC5 /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38DD0B0243617F70079AAC5 /* Array+.swift */; };
 		C38DD0B62436310C0079AAC5 /* DefaultButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38DD0B52436310C0079AAC5 /* DefaultButton.swift */; };
+		C38DD0B924363B3D0079AAC5 /* PickStationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38DD0B724363B3D0079AAC5 /* PickStationView.swift */; };
+		C38DD0BA24363B3D0079AAC5 /* PickStationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C38DD0B824363B3D0079AAC5 /* PickStationView.xib */; };
+		C38DD0BD24363DDB0079AAC5 /* MKMapView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38DD0BC24363DDB0079AAC5 /* MKMapView+.swift */; };
 		C3D0244E2433D80F003D4D5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0244D2433D80F003D4D5C /* AppDelegate.swift */; };
 		C3D024502433D80F003D4D5C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0244F2433D80F003D4D5C /* SceneDelegate.swift */; };
 		C3D024522433D80F003D4D5C /* MainPagerTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D024512433D80F003D4D5C /* MainPagerTab.swift */; };
@@ -44,6 +47,9 @@
 		C38DD0A92435FF770079AAC5 /* AddRefillController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddRefillController.xib; sourceTree = "<group>"; };
 		C38DD0B0243617F70079AAC5 /* Array+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
 		C38DD0B52436310C0079AAC5 /* DefaultButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultButton.swift; sourceTree = "<group>"; };
+		C38DD0B724363B3D0079AAC5 /* PickStationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickStationView.swift; sourceTree = "<group>"; };
+		C38DD0B824363B3D0079AAC5 /* PickStationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PickStationView.xib; sourceTree = "<group>"; };
+		C38DD0BC24363DDB0079AAC5 /* MKMapView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+.swift"; sourceTree = "<group>"; };
 		C3D0244A2433D80F003D4D5C /* FUELLY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FUELLY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3D0244D2433D80F003D4D5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3D0244F2433D80F003D4D5C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +119,17 @@
 			path = Button;
 			sourceTree = "<group>";
 		};
+		C38DD0BB24363B730079AAC5 /* AddRefillViews */ = {
+			isa = PBXGroup;
+			children = (
+				C38DD0A82435FF770079AAC5 /* AddRefillController.swift */,
+				C38DD0A92435FF770079AAC5 /* AddRefillController.xib */,
+				C38DD0B724363B3D0079AAC5 /* PickStationView.swift */,
+				C38DD0B824363B3D0079AAC5 /* PickStationView.xib */,
+			);
+			path = AddRefillViews;
+			sourceTree = "<group>";
+		};
 		C3D024412433D80F003D4D5C = {
 			isa = PBXGroup;
 			children = (
@@ -152,13 +169,12 @@
 		C3D024612433DADF003D4D5C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C38DD0BB24363B730079AAC5 /* AddRefillViews */,
 				C38DD0B424362EF50079AAC5 /* Button */,
 				C3D0247924349736003D4D5C /* Cells */,
 				C3D024512433D80F003D4D5C /* MainPagerTab.swift */,
 				C3D02475243494B1003D4D5C /* RefillsController.swift */,
 				C3D024692433EB1E003D4D5C /* StationsController.swift */,
-				C38DD0A82435FF770079AAC5 /* AddRefillController.swift */,
-				C38DD0A92435FF770079AAC5 /* AddRefillController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -203,6 +219,7 @@
 			children = (
 				C3D0247E2434B536003D4D5C /* UIColor+.swift */,
 				C38DD0B0243617F70079AAC5 /* Array+.swift */,
+				C38DD0BC24363DDB0079AAC5 /* MKMapView+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -280,6 +297,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C38DD0BA24363B3D0079AAC5 /* PickStationView.xib in Resources */,
 				C3D024872434C918003D4D5C /* StationCell.xib in Resources */,
 				C38DD0AB2435FF770079AAC5 /* AddRefillController.xib in Resources */,
 				C3D0245A2433D811003D4D5C /* LaunchScreen.storyboard in Resources */,
@@ -341,6 +359,8 @@
 			files = (
 				C3D0247324349034003D4D5C /* RefillsViewModel.swift in Sources */,
 				C3D0246A2433EB1E003D4D5C /* StationsController.swift in Sources */,
+				C38DD0B924363B3D0079AAC5 /* PickStationView.swift in Sources */,
+				C38DD0BD24363DDB0079AAC5 /* MKMapView+.swift in Sources */,
 				C3D024522433D80F003D4D5C /* MainPagerTab.swift in Sources */,
 				C3D0247124348F57003D4D5C /* RefillsService.swift in Sources */,
 				C3D0244E2433D80F003D4D5C /* AppDelegate.swift in Sources */,

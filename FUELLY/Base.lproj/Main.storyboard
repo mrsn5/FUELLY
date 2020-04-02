@@ -33,10 +33,9 @@
                                 <cells/>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FUELLY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exk-zS-qe5">
-                                <rect key="frame" x="110" y="0.0" width="100" height="24"/>
+                                <rect key="frame" x="117" y="0.0" width="86" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="1lN-Zh-EmB"/>
-                                    <constraint firstAttribute="width" constant="100" id="MFm-Nw-q7f"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
