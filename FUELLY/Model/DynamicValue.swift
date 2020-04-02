@@ -49,18 +49,20 @@ class GenericDataSource<T> : DynamicValue<State<T>> {
 }
 
 
+
+
 struct State<T> {
     var data: [T]
     
-    enum EditingStyle {
+    enum StateChange {
         case insert(T, IndexPath)
         case delete(IndexPath)
         case reload([T])
     }
     
-    var editingStyle: EditingStyle {
+    var stateChange: StateChange {
         didSet {
-            switch editingStyle {
+            switch stateChange {
             case let .insert(new, indexPath):
                 data.insert(new, at: indexPath.row)
             case let .delete(indexPath):
@@ -73,7 +75,7 @@ struct State<T> {
     
     init(data: [T]) {
         self.data = data
-        self.editingStyle = .reload(self.data)
+        self.stateChange = .reload(self.data)
     }
     
     init() {

@@ -12,12 +12,25 @@ import RealmSwift
 final class RefillsService {
     
     static let shared = RefillsService()
-   
-    func fetchRefills(_ completion: @escaping ((Result<[Refill], Error>) -> Void)) {
-        
-        let realm = try! Realm()
+    
+    
+    
+    let realm = try! Realm()
+    
+    func fetch(_ completion: @escaping ((Result<[Refill], Error>) -> Void)) {
         completion((.success(Array(realm.objects(Refill.self)))))
-            
+    }
+    
+    func save(_ refill: Refill, _ completion: @escaping ((Result<Refill, Error>) -> Void)) {
+        try! realm.write {
+            realm.add(refill)
+            completion(.success(refill))
+            print("saved")
+        }
+    }
+    
+    func delete(_ refill: Refill) {
+        
     }
 }
 

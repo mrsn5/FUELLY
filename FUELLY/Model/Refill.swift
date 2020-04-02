@@ -9,8 +9,8 @@
 import Foundation
 import RealmSwift
 
-class Refill: Object {
-    @objc dynamic var id = 0
+class Refill: Object, Comparable {
+    @objc dynamic var id = UUID().uuidString
     @objc dynamic var date: Date = Date()
     @objc dynamic var price: Float = 0.0
     @objc dynamic var quantity: Float = 0.0
@@ -18,5 +18,13 @@ class Refill: Object {
     
     override static func primaryKey() -> String? {
         return "id"
+    }
+    
+    static func sortByDate (lhs: Refill, rhs: Refill) -> Bool {
+        return lhs.date < rhs.date
+    }
+    
+    static func < (lhs: Refill, rhs: Refill) -> Bool {
+        return sortByDate(lhs: lhs, rhs: rhs)
     }
 }

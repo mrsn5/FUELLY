@@ -10,7 +10,7 @@ import Foundation
 import RealmSwift
 
 class Station: Object {
-    @objc dynamic var id = 0
+    @objc dynamic var id = UUID().uuidString
     @objc dynamic var adress: String = ""
     @objc dynamic var supplier: String = ""
     

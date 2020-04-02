@@ -24,7 +24,7 @@ class RefillCell: UICollectionViewCell {
     }
     
     func configure(_ refill: Refill) {
-        print(refill.price)
+       
     }
     
 }

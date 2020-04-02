@@ -11,16 +11,13 @@ import XLPagerTabStrip
 
 class RefillsController: UIViewController {
 
-    let dataSource = RefillsDataSource()
     
-    lazy var viewModel : RefillsViewModel = {
-        return RefillsViewModel(dataSource: dataSource)
-    }()
+    var viewModel = RefillsViewModel.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel.fetchData()
+        viewModel.fetch()
         setupCollectionView()
     }
 
@@ -29,14 +26,14 @@ class RefillsController: UIViewController {
         layout.sectionInset = UIEdgeInsets(top: 8, left: 0, bottom: 200, right: 0)
         
         let collectionView: UICollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
-        collectionView.dataSource = dataSource
+        collectionView.dataSource = viewModel.dataSource
         collectionView.delegate = self
         collectionView.register(RefillCell.nib, forCellWithReuseIdentifier: RefillCell.reuseID)
         collectionView.contentInset = .zero
 //        collectionView.backgroundColor = .white
         
-        self.dataSource.addAndNotify(observer: self) { state in
-            switch state.editingStyle {
+        self.viewModel.dataSource.addAndNotify(observer: self) { state in
+            switch state.stateChange {
                 case let .reload(ref):
                     print("reload \(ref.count)")
                 case let .insert(r, indexPath):

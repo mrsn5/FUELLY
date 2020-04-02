@@ -10,6 +10,10 @@
 		463A397B02716E5546F7F535 /* Pods_FUELLY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E68EE842A1EB01A1D7518E77 /* Pods_FUELLY.framework */; };
 		C38DD0A324352C370079AAC5 /* DynamicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38DD0A224352C370079AAC5 /* DynamicValue.swift */; };
 		C38DD0A6243543370079AAC5 /* RefillsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38DD0A5243543370079AAC5 /* RefillsDataSource.swift */; };
+		C38DD0AA2435FF770079AAC5 /* AddRefillController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38DD0A82435FF770079AAC5 /* AddRefillController.swift */; };
+		C38DD0AB2435FF770079AAC5 /* AddRefillController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C38DD0A92435FF770079AAC5 /* AddRefillController.xib */; };
+		C38DD0B1243617F70079AAC5 /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38DD0B0243617F70079AAC5 /* Array+.swift */; };
+		C38DD0B62436310C0079AAC5 /* DefaultButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38DD0B52436310C0079AAC5 /* DefaultButton.swift */; };
 		C3D0244E2433D80F003D4D5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0244D2433D80F003D4D5C /* AppDelegate.swift */; };
 		C3D024502433D80F003D4D5C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0244F2433D80F003D4D5C /* SceneDelegate.swift */; };
 		C3D024522433D80F003D4D5C /* MainPagerTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D024512433D80F003D4D5C /* MainPagerTab.swift */; };
@@ -36,6 +40,10 @@
 		B9CDCE30CDB6BE15CD246991 /* Pods-FUELLY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FUELLY.release.xcconfig"; path = "Target Support Files/Pods-FUELLY/Pods-FUELLY.release.xcconfig"; sourceTree = "<group>"; };
 		C38DD0A224352C370079AAC5 /* DynamicValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicValue.swift; sourceTree = "<group>"; };
 		C38DD0A5243543370079AAC5 /* RefillsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefillsDataSource.swift; sourceTree = "<group>"; };
+		C38DD0A82435FF770079AAC5 /* AddRefillController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRefillController.swift; sourceTree = "<group>"; };
+		C38DD0A92435FF770079AAC5 /* AddRefillController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddRefillController.xib; sourceTree = "<group>"; };
+		C38DD0B0243617F70079AAC5 /* Array+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
+		C38DD0B52436310C0079AAC5 /* DefaultButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultButton.swift; sourceTree = "<group>"; };
 		C3D0244A2433D80F003D4D5C /* FUELLY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FUELLY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3D0244D2433D80F003D4D5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3D0244F2433D80F003D4D5C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +105,14 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		C38DD0B424362EF50079AAC5 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				C38DD0B52436310C0079AAC5 /* DefaultButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
 		C3D024412433D80F003D4D5C = {
 			isa = PBXGroup;
 			children = (
@@ -136,10 +152,13 @@
 		C3D024612433DADF003D4D5C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C38DD0B424362EF50079AAC5 /* Button */,
 				C3D0247924349736003D4D5C /* Cells */,
 				C3D024512433D80F003D4D5C /* MainPagerTab.swift */,
 				C3D02475243494B1003D4D5C /* RefillsController.swift */,
 				C3D024692433EB1E003D4D5C /* StationsController.swift */,
+				C38DD0A82435FF770079AAC5 /* AddRefillController.swift */,
+				C38DD0A92435FF770079AAC5 /* AddRefillController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -183,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				C3D0247E2434B536003D4D5C /* UIColor+.swift */,
+				C38DD0B0243617F70079AAC5 /* Array+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -261,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3D024872434C918003D4D5C /* StationCell.xib in Resources */,
+				C38DD0AB2435FF770079AAC5 /* AddRefillController.xib in Resources */,
 				C3D0245A2433D811003D4D5C /* LaunchScreen.storyboard in Resources */,
 				C3D024832434BD9C003D4D5C /* PagerTabCell.xib in Resources */,
 				C3D0247D2434975C003D4D5C /* RefillCell.xib in Resources */,
@@ -331,8 +352,11 @@
 				C3D0247F2434B536003D4D5C /* UIColor+.swift in Sources */,
 				C3D0246D2433EE9B003D4D5C /* Refill.swift in Sources */,
 				C3D0247C2434975C003D4D5C /* RefillCell.swift in Sources */,
+				C38DD0B62436310C0079AAC5 /* DefaultButton.swift in Sources */,
+				C38DD0B1243617F70079AAC5 /* Array+.swift in Sources */,
 				C38DD0A6243543370079AAC5 /* RefillsDataSource.swift in Sources */,
 				C38DD0A324352C370079AAC5 /* DynamicValue.swift in Sources */,
+				C38DD0AA2435FF770079AAC5 /* AddRefillController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
