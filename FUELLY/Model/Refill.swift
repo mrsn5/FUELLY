@@ -7,13 +7,16 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct Reffil {
+class Refill: Object {
+    @objc dynamic var id = 0
+    @objc dynamic var date: Date = Date()
+    @objc dynamic var price: Float = 0.0
+    @objc dynamic var quantity: Float = 0.0
+    @objc dynamic var station: Station? = nil
     
-    public enum FuelType {
-      case ron95
-      case diesel
-      case gas
+    override static func primaryKey() -> String? {
+        return "id"
     }
-    
 }

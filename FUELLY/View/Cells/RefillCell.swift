@@ -14,9 +14,17 @@ class RefillCell: UICollectionViewCell {
     static let nib = UINib(nibName: String(describing: RefillCell.self), bundle: nil)
 
     @IBOutlet weak var cardView: UIView!
+    let cornerRadius: CGFloat = 10.0
+    private var shadowLayer: CAShapeLayer!
     
     override func layoutSubviews() {
+        super.layoutSubviews()
         cardView.clipsToBounds = true
-        cardView.layer.cornerRadius = 10
+        cardView.layer.cornerRadius = cornerRadius
     }
+    
+    func configure(_ refill: Refill) {
+        print(refill.price)
+    }
+    
 }

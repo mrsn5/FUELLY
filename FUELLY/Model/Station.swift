@@ -7,8 +7,14 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct Station {
-    let adress: String
-    let supplier: String
+class Station: Object {
+    @objc dynamic var id = 0
+    @objc dynamic var adress: String = ""
+    @objc dynamic var supplier: String = ""
+    
+    override static func primaryKey() -> String? {
+        return "id"
+    }
 }
