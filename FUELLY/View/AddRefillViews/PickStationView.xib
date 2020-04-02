@@ -21,16 +21,29 @@
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rpb-hL-ZGp">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                 </mapView>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Test" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fs0-m5-LIm" customClass="SearchTextField" customModule="FUELLY" customModuleProvider="target">
+                    <rect key="frame" x="16" y="20" width="288" height="52"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="52" id="Ngy-D0-rIh"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="rpb-hL-ZGp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="EIl-8x-1w0"/>
+                <constraint firstItem="Fs0-m5-LIm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="HNa-Kg-R9I"/>
                 <constraint firstItem="rpb-hL-ZGp" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="HwF-dM-KNP"/>
+                <constraint firstItem="Fs0-m5-LIm" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="VeV-fB-R9O"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Fs0-m5-LIm" secondAttribute="trailing" constant="16" id="hEp-XJ-6wc"/>
                 <constraint firstAttribute="bottom" secondItem="rpb-hL-ZGp" secondAttribute="bottom" id="myE-ia-Eot"/>
                 <constraint firstItem="rpb-hL-ZGp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="piy-Is-OrR"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
+            <point key="canvasLocation" x="136.875" y="93.75"/>
         </view>
     </objects>
 </document>

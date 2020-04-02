@@ -17,6 +17,8 @@
 		C38DD0B924363B3D0079AAC5 /* PickStationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38DD0B724363B3D0079AAC5 /* PickStationView.swift */; };
 		C38DD0BA24363B3D0079AAC5 /* PickStationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C38DD0B824363B3D0079AAC5 /* PickStationView.xib */; };
 		C38DD0BD24363DDB0079AAC5 /* MKMapView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38DD0BC24363DDB0079AAC5 /* MKMapView+.swift */; };
+		C38DD0BF243659770079AAC5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C38DD0BE243659770079AAC5 /* MapKit.framework */; };
+		C38DD0C1243676C70079AAC5 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38DD0C0243676C60079AAC5 /* SearchTextField.swift */; };
 		C3D0244E2433D80F003D4D5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0244D2433D80F003D4D5C /* AppDelegate.swift */; };
 		C3D024502433D80F003D4D5C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0244F2433D80F003D4D5C /* SceneDelegate.swift */; };
 		C3D024522433D80F003D4D5C /* MainPagerTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D024512433D80F003D4D5C /* MainPagerTab.swift */; };
@@ -50,6 +52,8 @@
 		C38DD0B724363B3D0079AAC5 /* PickStationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickStationView.swift; sourceTree = "<group>"; };
 		C38DD0B824363B3D0079AAC5 /* PickStationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PickStationView.xib; sourceTree = "<group>"; };
 		C38DD0BC24363DDB0079AAC5 /* MKMapView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+.swift"; sourceTree = "<group>"; };
+		C38DD0BE243659770079AAC5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C38DD0C0243676C60079AAC5 /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
 		C3D0244A2433D80F003D4D5C /* FUELLY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FUELLY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3D0244D2433D80F003D4D5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3D0244F2433D80F003D4D5C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C38DD0BF243659770079AAC5 /* MapKit.framework in Frameworks */,
 				463A397B02716E5546F7F535 /* Pods_FUELLY.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,6 +103,7 @@
 		8C1BE53499BF1571BADB3AF4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C38DD0BE243659770079AAC5 /* MapKit.framework */,
 				E68EE842A1EB01A1D7518E77 /* Pods_FUELLY.framework */,
 			);
 			name = Frameworks;
@@ -111,12 +117,13 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
-		C38DD0B424362EF50079AAC5 /* Button */ = {
+		C38DD0B424362EF50079AAC5 /* UI */ = {
 			isa = PBXGroup;
 			children = (
 				C38DD0B52436310C0079AAC5 /* DefaultButton.swift */,
+				C38DD0C0243676C60079AAC5 /* SearchTextField.swift */,
 			);
-			path = Button;
+			path = UI;
 			sourceTree = "<group>";
 		};
 		C38DD0BB24363B730079AAC5 /* AddRefillViews */ = {
@@ -170,7 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				C38DD0BB24363B730079AAC5 /* AddRefillViews */,
-				C38DD0B424362EF50079AAC5 /* Button */,
+				C38DD0B424362EF50079AAC5 /* UI */,
 				C3D0247924349736003D4D5C /* Cells */,
 				C3D024512433D80F003D4D5C /* MainPagerTab.swift */,
 				C3D02475243494B1003D4D5C /* RefillsController.swift */,
@@ -370,6 +377,7 @@
 				C3D024862434C918003D4D5C /* StationCell.swift in Sources */,
 				C3D02477243494B1003D4D5C /* RefillsController.swift in Sources */,
 				C3D0247F2434B536003D4D5C /* UIColor+.swift in Sources */,
+				C38DD0C1243676C70079AAC5 /* SearchTextField.swift in Sources */,
 				C3D0246D2433EE9B003D4D5C /* Refill.swift in Sources */,
 				C3D0247C2434975C003D4D5C /* RefillCell.swift in Sources */,
 				C38DD0B62436310C0079AAC5 /* DefaultButton.swift in Sources */,
