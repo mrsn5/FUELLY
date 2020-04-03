@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import RealmSwift
 
 class StationCell: UICollectionViewCell {
 
     static let reuseID = String(describing: StationCell.self)
     static let nib = UINib(nibName: String(describing: StationCell.self), bundle: nil)
 
+    @IBOutlet weak var supplierLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var visitsCounter: UILabel!
+    @IBOutlet weak var lastMonthLabel: UILabel!
+    @IBOutlet weak var totalLabel: UILabel!
+    
     @IBOutlet weak var cardView: UIView!
     
     override func layoutSubviews() {
@@ -20,6 +27,34 @@ class StationCell: UICollectionViewCell {
     }
     
     func configure(_ station: Station) {
+        supplierLabel.text = station.supplier
+        addressLabel.text = station.address
+        visitsCounter.text = "Visits: \(station.refills.count)"
+        totalLabel.text = "Total: ₴ 0.00"
+        lastMonthLabel.text = "Last month: ₴ 0.00"
         
+        let stationRef = ThreadSafeReference(to: station)
+        DispatchQueue(label: "background").async {
+            autoreleasepool {
+                let realm = try! Realm()
+                guard let station = realm.resolve(stationRef) else { return }
+                var total: Float = 0.0
+                var lastMonth: Float = 0.0
+                let lastMonthDate = Date().addingTimeInterval(-30 * 24 * 60 * 60)
+                for r in station.refills {
+                    total += r.price
+                    if r.date > lastMonthDate {
+                        lastMonth += r.price
+                    }
+                }
+                DispatchQueue.main.async { [weak self] in
+                    self?.totalLabel.text = "Total: ₴ \(total)"
+                    self?.lastMonthLabel.text = "Last month: ₴  \(lastMonth)"
+                }
+                
+            }
+        }
     }
+    
+    
 }

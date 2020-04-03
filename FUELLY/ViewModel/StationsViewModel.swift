@@ -37,6 +37,7 @@ final class StationsViewModel {
                     let row = data.insertBySortIndex(station, isOrderedBefore: { $0 > $1 })
                     if (row < data.count || row == 0) {
                         self.dataSource.value.stateChange = .insert(refill, IndexPath(row: row, section: 0))
+                        
                     }
                     break
                 case .failure(let error):

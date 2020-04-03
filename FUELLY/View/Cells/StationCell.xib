@@ -108,7 +108,12 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="457" height="310"/>
             <connections>
+                <outlet property="addressLabel" destination="i2y-bz-7RV" id="rFP-rN-jTN"/>
                 <outlet property="cardView" destination="O1o-RD-DUM" id="Zmi-Tz-lB4"/>
+                <outlet property="lastMonthLabel" destination="xj9-EE-QvB" id="p9G-c9-eVE"/>
+                <outlet property="supplierLabel" destination="wbN-EJ-E1l" id="Co8-e0-G6s"/>
+                <outlet property="totalLabel" destination="PK2-3h-zGW" id="b2e-S0-Cd8"/>
+                <outlet property="visitsCounter" destination="rhg-Rf-Ez8" id="icL-vv-qrV"/>
             </connections>
             <point key="canvasLocation" x="126.81159420289856" y="114.50892857142857"/>
         </collectionViewCell>

@@ -14,11 +14,22 @@ class Station: Object, Comparable {
     @objc dynamic var id = UUID().uuidString
     @objc dynamic var address: String = ""
     @objc dynamic var supplier: String = ""
-    @objc dynamic var lan: Float = 0.0
-    @objc dynamic var lat: Float = 0.0
+    @objc dynamic var lon: Double = 0.0
+    @objc dynamic var lat: Double = 0.0
+    let refills = LinkingObjects(fromType: Refill.self, property: "station")
     
     override static func primaryKey() -> String? {
         return "id"
+    }
+    
+    required init() {}
+    
+    init(placemark: MKPlacemark) {
+        address = placemark.title ?? ""
+        supplier = placemark.name ?? ""
+        lon = placemark.coordinate.longitude
+        lat = placemark.coordinate.latitude
+        
     }
     
     static func sortByDate (lhs: Station, rhs: Station) -> Bool {

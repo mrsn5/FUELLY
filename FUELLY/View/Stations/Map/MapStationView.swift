@@ -74,6 +74,18 @@ class MapStationView: UIViewController {
         searchStations()
     }
     
+    @IBAction func confirmed(_ sender: Any) {
+        guard let placemark = selectedPin.value else { return }
+        let stationCreationView = StationCreationView(nibName: "StationCreationView", bundle: nil)
+        stationCreationView.station = Station(placemark: placemark)
+        stationCreationView.dismissCallback = {
+            self.dismiss(animated: true, completion: nil)
+        }
+        
+        
+        self.present(stationCreationView, animated: true, completion: nil)
+    }
+    
     @objc func handleTap(gestureRecognizer: UILongPressGestureRecognizer) {
 
         let viewCoord = gestureRecognizer.location(in: mapView)

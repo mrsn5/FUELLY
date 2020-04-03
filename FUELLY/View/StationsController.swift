@@ -39,8 +39,10 @@ class StationsController: UIViewController {
                     print("insert \(r)")
                 case let .delete(indexPath):
                     print("delete")
+                default:
+                    break
             }
-            
+            print(" +++ \(self.viewModel.dataSource.value.data.count)")
             collectionView.reloadData()
         }
         

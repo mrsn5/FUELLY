@@ -16,19 +16,32 @@ class AddRefillController: UIViewController {
     @IBOutlet weak var priceField: UITextField!
     @IBOutlet weak var stationButton: UIButton!
     
+    var selectedStation: DynamicValue<Station?> = DynamicValue(nil)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         let dismissGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
         self.view.addGestureRecognizer(dismissGesture)
+        
+        selectedStation.addAndNotify(observer: self) { (station) in
+            if station != nil {
+                self.stationButton.setTitleColor(.black, for: .normal)
+                self.stationButton.setTitle(station?.supplier,for: .normal)
+            } else {
+                self.stationButton.setTitleColor(.lightGray, for: .normal)
+                self.stationButton.setTitle("Choose" ,for: .normal)
+            }
+        }
+        
     }
     @IBAction func confirmed(_ sender: Any) {
         
     }
     
     @IBAction func stationTapped(_ sender: Any) {
-        let newViewController = StationPicker(nibName: "StationPicker", bundle: nil)
-        self.present(newViewController, animated: true, completion: nil)
+        let stationPicker = StationPicker(nibName: "StationPicker", bundle: nil)
+        stationPicker.selectedStation = self.selectedStation
+        self.present(stationPicker, animated: true, completion: nil)
     }
     
     @objc func dismissKeyboard (_ sender: UITapGestureRecognizer) {

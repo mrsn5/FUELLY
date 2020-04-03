@@ -33,12 +33,14 @@ class RefillsController: UIViewController {
         
         self.viewModel.dataSource.addAndNotify(observer: self) { state in
             switch state.stateChange {
-                case let .reload(ref):
-                    print("reload \(ref.count)")
-                case let .insert(r, indexPath):
-                    print("insert \(r)")
-                case let .delete(indexPath):
-                    print("delete")
+            case let .reload(ref):
+                print("reload \(ref.count)")
+            case let .insert(r, indexPath):
+                print("insert \(r)")
+            case let .delete(indexPath):
+                print("delete")
+            default:
+                break
             }
             
             collectionView.reloadData()

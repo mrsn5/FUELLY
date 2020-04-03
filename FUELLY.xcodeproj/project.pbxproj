@@ -18,6 +18,8 @@
 		C379B2162437ADF4009620BF /* StationsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C379B2152437ADF4009620BF /* StationsDataSource.swift */; };
 		C379B2182437AEC0009620BF /* StationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C379B2172437AEC0009620BF /* StationService.swift */; };
 		C379B21A2437B288009620BF /* GenericDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C379B2192437B288009620BF /* GenericDataSource.swift */; };
+		C379B21D2437C1AF009620BF /* StationCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C379B21B2437C1AF009620BF /* StationCreationView.swift */; };
+		C379B21E2437C1AF009620BF /* StationCreationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C379B21C2437C1AF009620BF /* StationCreationView.xib */; };
 		C37EF1A3243757BC00FE5A2E /* SimpleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37EF1A1243757BC00FE5A2E /* SimpleCell.swift */; };
 		C37EF1A4243757BC00FE5A2E /* SimpleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C37EF1A2243757BC00FE5A2E /* SimpleCell.xib */; };
 		C38DD0A324352C370079AAC5 /* DynamicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38DD0A224352C370079AAC5 /* DynamicValue.swift */; };
@@ -66,6 +68,8 @@
 		C379B2152437ADF4009620BF /* StationsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsDataSource.swift; sourceTree = "<group>"; };
 		C379B2172437AEC0009620BF /* StationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationService.swift; sourceTree = "<group>"; };
 		C379B2192437B288009620BF /* GenericDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericDataSource.swift; sourceTree = "<group>"; };
+		C379B21B2437C1AF009620BF /* StationCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationCreationView.swift; sourceTree = "<group>"; };
+		C379B21C2437C1AF009620BF /* StationCreationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StationCreationView.xib; sourceTree = "<group>"; };
 		C37EF1A1243757BC00FE5A2E /* SimpleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCell.swift; sourceTree = "<group>"; };
 		C37EF1A2243757BC00FE5A2E /* SimpleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleCell.xib; sourceTree = "<group>"; };
 		C38DD0A224352C370079AAC5 /* DynamicValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicValue.swift; sourceTree = "<group>"; };
@@ -135,6 +139,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C379B21F2437C1E6009620BF /* Stations */ = {
+			isa = PBXGroup;
+			children = (
+				C379B2202437C3CC009620BF /* Map */,
+				C379B20B24379D70009620BF /* StationPicker.swift */,
+				C379B20C24379D70009620BF /* StationPicker.xib */,
+				C379B21B2437C1AF009620BF /* StationCreationView.swift */,
+				C379B21C2437C1AF009620BF /* StationCreationView.xib */,
+			);
+			path = Stations;
+			sourceTree = "<group>";
+		};
+		C379B2202437C3CC009620BF /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				C38DD0B724363B3D0079AAC5 /* MapStationView.swift */,
+				C38DD0B824363B3D0079AAC5 /* MapStationView.xib */,
+				C3ADB774243736C9007E935C /* LocationSearchTable.swift */,
+				C3ADB775243736C9007E935C /* LocationSearchTable.xib */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		C38DD0A424352D0D0079AAC5 /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,19 +181,13 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
-		C38DD0BB24363B730079AAC5 /* AddRefillViews */ = {
+		C38DD0BB24363B730079AAC5 /* Refills */ = {
 			isa = PBXGroup;
 			children = (
 				C38DD0A82435FF770079AAC5 /* AddRefillController.swift */,
 				C38DD0A92435FF770079AAC5 /* AddRefillController.xib */,
-				C38DD0B724363B3D0079AAC5 /* MapStationView.swift */,
-				C38DD0B824363B3D0079AAC5 /* MapStationView.xib */,
-				C3ADB774243736C9007E935C /* LocationSearchTable.swift */,
-				C3ADB775243736C9007E935C /* LocationSearchTable.xib */,
-				C379B20B24379D70009620BF /* StationPicker.swift */,
-				C379B20C24379D70009620BF /* StationPicker.xib */,
 			);
-			path = AddRefillViews;
+			path = Refills;
 			sourceTree = "<group>";
 		};
 		C3D024412433D80F003D4D5C = {
@@ -210,7 +231,8 @@
 			children = (
 				C38DD0B424362EF50079AAC5 /* UI */,
 				C3D0247924349736003D4D5C /* Cells */,
-				C38DD0BB24363B730079AAC5 /* AddRefillViews */,
+				C379B21F2437C1E6009620BF /* Stations */,
+				C38DD0BB24363B730079AAC5 /* Refills */,
 				C3D024512433D80F003D4D5C /* MainPagerTab.swift */,
 				C3D02475243494B1003D4D5C /* RefillsController.swift */,
 				C3D024692433EB1E003D4D5C /* StationsController.swift */,
@@ -348,6 +370,7 @@
 				C379B2122437A2C2009620BF /* AddNewCell.xib in Resources */,
 				C3ADB777243736C9007E935C /* LocationSearchTable.xib in Resources */,
 				C38DD0AB2435FF770079AAC5 /* AddRefillController.xib in Resources */,
+				C379B21E2437C1AF009620BF /* StationCreationView.xib in Resources */,
 				C3D0245A2433D811003D4D5C /* LaunchScreen.storyboard in Resources */,
 				C37EF1A4243757BC00FE5A2E /* SimpleCell.xib in Resources */,
 				C3D024832434BD9C003D4D5C /* PagerTabCell.xib in Resources */,
@@ -420,6 +443,7 @@
 				C3D0246F2433EEB9003D4D5C /* Station.swift in Sources */,
 				C3D024822434BD9C003D4D5C /* PagerTabCell.swift in Sources */,
 				C3D024862434C918003D4D5C /* StationCell.swift in Sources */,
+				C379B21D2437C1AF009620BF /* StationCreationView.swift in Sources */,
 				C379B2142437ADA4009620BF /* StationsViewModel.swift in Sources */,
 				C3D02477243494B1003D4D5C /* RefillsController.swift in Sources */,
 				C3D0247F2434B536003D4D5C /* UIColor+.swift in Sources */,

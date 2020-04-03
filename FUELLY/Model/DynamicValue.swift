@@ -49,6 +49,7 @@ struct State<T> {
         case insert(T, IndexPath)
         case delete(IndexPath)
         case reload([T])
+        case none
     }
     
     var stateChange: StateChange {
@@ -60,7 +61,10 @@ struct State<T> {
                 data.remove(at: indexPath.row)
             case let .reload(new):
                 data = new
+            default:
+                break
             }
+            stateChange = .none
         }
     }
     
