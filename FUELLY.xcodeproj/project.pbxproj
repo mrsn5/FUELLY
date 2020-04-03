@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		463A397B02716E5546F7F535 /* Pods_FUELLY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E68EE842A1EB01A1D7518E77 /* Pods_FUELLY.framework */; };
+		C37EF1A3243757BC00FE5A2E /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37EF1A1243757BC00FE5A2E /* SearchCell.swift */; };
+		C37EF1A4243757BC00FE5A2E /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C37EF1A2243757BC00FE5A2E /* SearchCell.xib */; };
 		C38DD0A324352C370079AAC5 /* DynamicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38DD0A224352C370079AAC5 /* DynamicValue.swift */; };
 		C38DD0A6243543370079AAC5 /* RefillsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38DD0A5243543370079AAC5 /* RefillsDataSource.swift */; };
 		C38DD0AA2435FF770079AAC5 /* AddRefillController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38DD0A82435FF770079AAC5 /* AddRefillController.swift */; };
@@ -19,6 +21,8 @@
 		C38DD0BD24363DDB0079AAC5 /* MKMapView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38DD0BC24363DDB0079AAC5 /* MKMapView+.swift */; };
 		C38DD0BF243659770079AAC5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C38DD0BE243659770079AAC5 /* MapKit.framework */; };
 		C38DD0C1243676C70079AAC5 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38DD0C0243676C60079AAC5 /* SearchTextField.swift */; };
+		C3ADB776243736C9007E935C /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ADB774243736C9007E935C /* LocationSearchTable.swift */; };
+		C3ADB777243736C9007E935C /* LocationSearchTable.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3ADB775243736C9007E935C /* LocationSearchTable.xib */; };
 		C3D0244E2433D80F003D4D5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0244D2433D80F003D4D5C /* AppDelegate.swift */; };
 		C3D024502433D80F003D4D5C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0244F2433D80F003D4D5C /* SceneDelegate.swift */; };
 		C3D024522433D80F003D4D5C /* MainPagerTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D024512433D80F003D4D5C /* MainPagerTab.swift */; };
@@ -43,6 +47,8 @@
 /* Begin PBXFileReference section */
 		17D71796A4A21441805B34CC /* Pods-FUELLY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FUELLY.debug.xcconfig"; path = "Target Support Files/Pods-FUELLY/Pods-FUELLY.debug.xcconfig"; sourceTree = "<group>"; };
 		B9CDCE30CDB6BE15CD246991 /* Pods-FUELLY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FUELLY.release.xcconfig"; path = "Target Support Files/Pods-FUELLY/Pods-FUELLY.release.xcconfig"; sourceTree = "<group>"; };
+		C37EF1A1243757BC00FE5A2E /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		C37EF1A2243757BC00FE5A2E /* SearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
 		C38DD0A224352C370079AAC5 /* DynamicValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicValue.swift; sourceTree = "<group>"; };
 		C38DD0A5243543370079AAC5 /* RefillsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefillsDataSource.swift; sourceTree = "<group>"; };
 		C38DD0A82435FF770079AAC5 /* AddRefillController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRefillController.swift; sourceTree = "<group>"; };
@@ -54,6 +60,8 @@
 		C38DD0BC24363DDB0079AAC5 /* MKMapView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+.swift"; sourceTree = "<group>"; };
 		C38DD0BE243659770079AAC5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C38DD0C0243676C60079AAC5 /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
+		C3ADB774243736C9007E935C /* LocationSearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
+		C3ADB775243736C9007E935C /* LocationSearchTable.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationSearchTable.xib; sourceTree = "<group>"; };
 		C3D0244A2433D80F003D4D5C /* FUELLY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FUELLY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3D0244D2433D80F003D4D5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3D0244F2433D80F003D4D5C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +141,8 @@
 				C38DD0A92435FF770079AAC5 /* AddRefillController.xib */,
 				C38DD0B724363B3D0079AAC5 /* PickStationView.swift */,
 				C38DD0B824363B3D0079AAC5 /* PickStationView.xib */,
+				C3ADB774243736C9007E935C /* LocationSearchTable.swift */,
+				C3ADB775243736C9007E935C /* LocationSearchTable.xib */,
 			);
 			path = AddRefillViews;
 			sourceTree = "<group>";
@@ -176,9 +186,9 @@
 		C3D024612433DADF003D4D5C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C38DD0BB24363B730079AAC5 /* AddRefillViews */,
 				C38DD0B424362EF50079AAC5 /* UI */,
 				C3D0247924349736003D4D5C /* Cells */,
+				C38DD0BB24363B730079AAC5 /* AddRefillViews */,
 				C3D024512433D80F003D4D5C /* MainPagerTab.swift */,
 				C3D02475243494B1003D4D5C /* RefillsController.swift */,
 				C3D024692433EB1E003D4D5C /* StationsController.swift */,
@@ -240,6 +250,8 @@
 				C3D024812434BD9C003D4D5C /* PagerTabCell.xib */,
 				C3D024842434C918003D4D5C /* StationCell.swift */,
 				C3D024852434C918003D4D5C /* StationCell.xib */,
+				C37EF1A1243757BC00FE5A2E /* SearchCell.swift */,
+				C37EF1A2243757BC00FE5A2E /* SearchCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -306,8 +318,10 @@
 			files = (
 				C38DD0BA24363B3D0079AAC5 /* PickStationView.xib in Resources */,
 				C3D024872434C918003D4D5C /* StationCell.xib in Resources */,
+				C3ADB777243736C9007E935C /* LocationSearchTable.xib in Resources */,
 				C38DD0AB2435FF770079AAC5 /* AddRefillController.xib in Resources */,
 				C3D0245A2433D811003D4D5C /* LaunchScreen.storyboard in Resources */,
+				C37EF1A4243757BC00FE5A2E /* SearchCell.xib in Resources */,
 				C3D024832434BD9C003D4D5C /* PagerTabCell.xib in Resources */,
 				C3D0247D2434975C003D4D5C /* RefillCell.xib in Resources */,
 				C3D024572433D811003D4D5C /* Assets.xcassets in Resources */,
@@ -369,6 +383,7 @@
 				C38DD0B924363B3D0079AAC5 /* PickStationView.swift in Sources */,
 				C38DD0BD24363DDB0079AAC5 /* MKMapView+.swift in Sources */,
 				C3D024522433D80F003D4D5C /* MainPagerTab.swift in Sources */,
+				C3ADB776243736C9007E935C /* LocationSearchTable.swift in Sources */,
 				C3D0247124348F57003D4D5C /* RefillsService.swift in Sources */,
 				C3D0244E2433D80F003D4D5C /* AppDelegate.swift in Sources */,
 				C3D024502433D80F003D4D5C /* SceneDelegate.swift in Sources */,
@@ -385,6 +400,7 @@
 				C38DD0A6243543370079AAC5 /* RefillsDataSource.swift in Sources */,
 				C38DD0A324352C370079AAC5 /* DynamicValue.swift in Sources */,
 				C38DD0AA2435FF770079AAC5 /* AddRefillController.swift in Sources */,
+				C37EF1A3243757BC00FE5A2E /* SearchCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

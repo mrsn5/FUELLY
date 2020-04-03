@@ -27,9 +27,9 @@ class DefaultButton: UIButton {
         
         // Shadow and Radius
         layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1).cgColor
-        layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
         layer.shadowOpacity = 0.33
-        layer.shadowRadius = 4
+        layer.shadowRadius = 2
         layer.masksToBounds = false
         layer.cornerRadius = 4.0
     }
