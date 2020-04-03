@@ -15,6 +15,7 @@ class Refill: Object, Comparable {
     @objc dynamic var price: Float = 0.0
     @objc dynamic var quantity: Float = 0.0
     @objc dynamic var station: Station? = nil
+    @objc dynamic var fuelType: String? = nil
     
     override static func primaryKey() -> String? {
         return "id"

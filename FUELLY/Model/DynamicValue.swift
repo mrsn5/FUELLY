@@ -64,7 +64,6 @@ struct State<T> {
             default:
                 break
             }
-            stateChange = .none
         }
     }
     

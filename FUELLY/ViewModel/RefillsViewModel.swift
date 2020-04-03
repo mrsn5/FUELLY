@@ -33,10 +33,16 @@ final class RefillsViewModel {
             DispatchQueue.main.async {
                 switch result {
                 case .success(let refill):
+
                     let data = self.dataSource.value.data
-                    let row = data.insertBySortIndex(refill, isOrderedBefore: { $0 > $1 })
-                    if (row < data.count || row == 0) {
-                        self.dataSource.value.stateChange = .insert(refill, IndexPath(row: row, section: 0))
+                    if let row = data.firstIndex(of: refill) {
+                        self.dataSource.value.stateChange = .delete(IndexPath(row: row, section: 0))
+                        self.dataSource.value.stateChange = .insert(refill, (IndexPath(row: row, section: 0)))
+                    } else {
+                        let row = data.insertBySortIndex(refill, isOrderedBefore: { $0 > $1 })
+                        if (row < data.count || row == 0) {
+                            self.dataSource.value.stateChange = .insert(refill, IndexPath(row: row, section: 0))
+                        }
                     }
                     break
                 case .failure(let error):

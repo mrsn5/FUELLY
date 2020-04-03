@@ -10,7 +10,7 @@ import UIKit
 
 class StationCreationView: UIViewController {
 
-    var station: Station!
+    var station = Station()
     let viewModel = StationsViewModel.shared
     var dismissCallback: (() -> Void)?
     
@@ -20,6 +20,7 @@ class StationCreationView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         supplierField.text = station.supplier
         addressField.text = station.address
         
@@ -29,6 +30,7 @@ class StationCreationView: UIViewController {
 
     @IBAction func save(_ sender: Any) {
         guard let supplier = supplierField.text, let address = addressField.text else { return }
+
         station.supplier = supplier
         station.address = address
         viewModel.save(station)

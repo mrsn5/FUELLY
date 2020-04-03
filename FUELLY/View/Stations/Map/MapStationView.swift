@@ -14,6 +14,9 @@ class MapStationView: UIViewController {
     @IBOutlet private var mapView: MKMapView!
     @IBOutlet private var searchBarView: UIView!
     @IBOutlet weak var confirmButton: DefaultButton!
+    
+    var dismissCallback: (() -> Void)?
+    
     let locationManager = CLLocationManager()
     var resultSearchController:UISearchController? = nil
     
@@ -79,7 +82,7 @@ class MapStationView: UIViewController {
         let stationCreationView = StationCreationView(nibName: "StationCreationView", bundle: nil)
         stationCreationView.station = Station(placemark: placemark)
         stationCreationView.dismissCallback = {
-            self.dismiss(animated: true, completion: nil)
+            self.dismiss(animated: true, completion: self.dismissCallback)
         }
         
         

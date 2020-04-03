@@ -38,6 +38,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
             realm.add(st1)
             realm.add(ref1)
+            realm.add(ref1)
             
         }
         

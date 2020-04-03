@@ -48,8 +48,11 @@ extension StationPicker: UITableViewDelegate {
     func tableView(_ tableView: UITableView,
                    didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
-            let newViewController = MapStationView(nibName: "MapStationView", bundle: nil)
-            self.present(newViewController, animated: true, completion: nil)
+            let mapStationView = MapStationView(nibName: "MapStationView", bundle: nil)
+            mapStationView.dismissCallback = {
+                self.dismiss(animated: true, completion: nil)
+            }
+            self.present(mapStationView, animated: true, completion: nil)
         } else {
             self.selectedStation?.value = viewModel.dataSource.value.data[indexPath.row - 1]
             self.dismiss(animated: true, completion: nil)
