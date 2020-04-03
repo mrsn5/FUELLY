@@ -10,35 +10,22 @@ import Foundation
 import RealmSwift
 import MapKit
 
-class Station: Object {
+class Station: Object, Comparable {
     @objc dynamic var id = UUID().uuidString
-    @objc dynamic var adress: String = ""
+    @objc dynamic var address: String = ""
     @objc dynamic var supplier: String = ""
-
+    @objc dynamic var lan: Float = 0.0
+    @objc dynamic var lat: Float = 0.0
+    
     override static func primaryKey() -> String? {
         return "id"
     }
-}
-
-
-class StationAnnotation: NSObject, MKAnnotation {
     
-    let title: String?
-    let locationName: String?
-    let coordinate: CLLocationCoordinate2D
-
-    init(
-        title: String?,
-        locationName: String?,
-        coordinate: CLLocationCoordinate2D
-    ) {
-        self.title = title
-        self.locationName = locationName
-        self.coordinate = coordinate
-        super.init()
+    static func sortByDate (lhs: Station, rhs: Station) -> Bool {
+        return lhs.supplier < rhs.supplier
     }
     
-    var subtitle: String? {
-        return locationName
+    static func < (lhs: Station, rhs: Station) -> Bool {
+        return sortByDate(lhs: lhs, rhs: rhs)
     }
 }

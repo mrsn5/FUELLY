@@ -22,9 +22,8 @@ class LocationSearchTable: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(SearchCell.nib, forCellReuseIdentifier: SearchCell.reuseID)
+        tableView.register(SimpleCell.nib, forCellReuseIdentifier: SimpleCell.reuseID)
     }
-
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return matchingItems.count
@@ -33,14 +32,13 @@ class LocationSearchTable: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: SearchCell.reuseID, for: indexPath) as? SearchCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: SimpleCell.reuseID, for: indexPath) as? SimpleCell else {
             fatalError("Wrong cell")
         }
         cell.configure(placemark: matchingItems[indexPath.row].placemark)
         return cell
         
     }
-    
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         

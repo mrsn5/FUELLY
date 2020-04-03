@@ -13,18 +13,30 @@ class RefillCell: UICollectionViewCell {
     static let reuseID = String(describing: RefillCell.self)
     static let nib = UINib(nibName: String(describing: RefillCell.self), bundle: nil)
 
+    @IBOutlet weak var totalLabel: UILabel!
+    @IBOutlet weak var priceInfo: UILabel!
+    
+    @IBOutlet weak var stationName: UILabel!
+    @IBOutlet weak var stationAddress: UILabel!
+    
+    @IBOutlet weak var timeLabel: UILabel!
+    
     @IBOutlet weak var cardView: UIView!
     let cornerRadius: CGFloat = 10.0
     private var shadowLayer: CAShapeLayer!
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        cardView.clipsToBounds = true
         cardView.layer.cornerRadius = cornerRadius
     }
     
     func configure(_ refill: Refill) {
-       
+        totalLabel.text = "₴ \(refill.price)"
+        priceInfo.text = "₴ \(refill.price / refill.quantity) × \(refill.quantity)"
+        stationName.text = refill.station?.supplier
+        stationAddress.text = refill.station?.address
+        
+        //timeLabel.text = refill.date
     }
     
 }

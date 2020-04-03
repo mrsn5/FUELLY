@@ -42,15 +42,6 @@ class DynamicValue<T>: NSObject {
 }
 
 
-class GenericDataSource<T> : DynamicValue<State<T>> {
-    init() {
-        super.init(State<T>())
-    }
-}
-
-
-
-
 struct State<T> {
     var data: [T]
     

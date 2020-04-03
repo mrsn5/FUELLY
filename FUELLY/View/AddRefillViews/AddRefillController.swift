@@ -11,24 +11,33 @@ import UIKit
 class AddRefillController: UIViewController {
 
     var viewModel = RefillsViewModel.shared
+    @IBOutlet weak var quantityField: UITextField!
+    @IBOutlet weak var fuelField: UITextField!
+    @IBOutlet weak var priceField: UITextField!
+    @IBOutlet weak var stationButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let r = Refill()
-        r.station = Station()
-        viewModel.save(r)
+        
+        let dismissGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
+        self.view.addGestureRecognizer(dismissGesture)
     }
-
+    @IBAction func confirmed(_ sender: Any) {
+        
+    }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func stationTapped(_ sender: Any) {
+        let newViewController = StationPicker(nibName: "StationPicker", bundle: nil)
+        self.present(newViewController, animated: true, completion: nil)
     }
-    */
-
+    
+    @objc func dismissKeyboard (_ sender: UITapGestureRecognizer) {
+        quantityField.resignFirstResponder()
+        fuelField.resignFirstResponder()
+        priceField.resignFirstResponder()
+    }
+    
+    @objc func stationFieldTapped (_ sender: UITapGestureRecognizer) {
+        print("TAPTAP")
+    }
 }

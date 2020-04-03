@@ -16,7 +16,10 @@ class StationCell: UICollectionViewCell {
     @IBOutlet weak var cardView: UIView!
     
     override func layoutSubviews() {
-        cardView.clipsToBounds = true
         cardView.layer.cornerRadius = 10
+    }
+    
+    func configure(_ station: Station) {
+        
     }
 }

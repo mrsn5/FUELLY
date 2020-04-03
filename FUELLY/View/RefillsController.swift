@@ -11,12 +11,10 @@ import XLPagerTabStrip
 
 class RefillsController: UIViewController {
 
-    
     var viewModel = RefillsViewModel.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         viewModel.fetch()
         setupCollectionView()
     }
@@ -30,7 +28,8 @@ class RefillsController: UIViewController {
         collectionView.delegate = self
         collectionView.register(RefillCell.nib, forCellWithReuseIdentifier: RefillCell.reuseID)
         collectionView.contentInset = .zero
-//        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = .systemBackground
+        
         
         self.viewModel.dataSource.addAndNotify(observer: self) { state in
             switch state.stateChange {

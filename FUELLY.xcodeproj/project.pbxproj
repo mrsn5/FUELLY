@@ -8,17 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		463A397B02716E5546F7F535 /* Pods_FUELLY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E68EE842A1EB01A1D7518E77 /* Pods_FUELLY.framework */; };
-		C37EF1A3243757BC00FE5A2E /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37EF1A1243757BC00FE5A2E /* SearchCell.swift */; };
-		C37EF1A4243757BC00FE5A2E /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C37EF1A2243757BC00FE5A2E /* SearchCell.xib */; };
+		C379B20824376C4D009620BF /* PlacemarkAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C379B20724376C4D009620BF /* PlacemarkAnnotation.swift */; };
+		C379B20A24378EF9009620BF /* ViewWithShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C379B20924378EF9009620BF /* ViewWithShadow.swift */; };
+		C379B20D24379D70009620BF /* StationPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C379B20B24379D70009620BF /* StationPicker.swift */; };
+		C379B20E24379D70009620BF /* StationPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = C379B20C24379D70009620BF /* StationPicker.xib */; };
+		C379B2112437A2C2009620BF /* AddNewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C379B20F2437A2C2009620BF /* AddNewCell.swift */; };
+		C379B2122437A2C2009620BF /* AddNewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C379B2102437A2C2009620BF /* AddNewCell.xib */; };
+		C379B2142437ADA4009620BF /* StationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C379B2132437ADA4009620BF /* StationsViewModel.swift */; };
+		C379B2162437ADF4009620BF /* StationsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C379B2152437ADF4009620BF /* StationsDataSource.swift */; };
+		C379B2182437AEC0009620BF /* StationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C379B2172437AEC0009620BF /* StationService.swift */; };
+		C379B21A2437B288009620BF /* GenericDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C379B2192437B288009620BF /* GenericDataSource.swift */; };
+		C37EF1A3243757BC00FE5A2E /* SimpleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37EF1A1243757BC00FE5A2E /* SimpleCell.swift */; };
+		C37EF1A4243757BC00FE5A2E /* SimpleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C37EF1A2243757BC00FE5A2E /* SimpleCell.xib */; };
 		C38DD0A324352C370079AAC5 /* DynamicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38DD0A224352C370079AAC5 /* DynamicValue.swift */; };
 		C38DD0A6243543370079AAC5 /* RefillsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38DD0A5243543370079AAC5 /* RefillsDataSource.swift */; };
 		C38DD0AA2435FF770079AAC5 /* AddRefillController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38DD0A82435FF770079AAC5 /* AddRefillController.swift */; };
 		C38DD0AB2435FF770079AAC5 /* AddRefillController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C38DD0A92435FF770079AAC5 /* AddRefillController.xib */; };
 		C38DD0B1243617F70079AAC5 /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38DD0B0243617F70079AAC5 /* Array+.swift */; };
 		C38DD0B62436310C0079AAC5 /* DefaultButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38DD0B52436310C0079AAC5 /* DefaultButton.swift */; };
-		C38DD0B924363B3D0079AAC5 /* PickStationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38DD0B724363B3D0079AAC5 /* PickStationView.swift */; };
-		C38DD0BA24363B3D0079AAC5 /* PickStationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C38DD0B824363B3D0079AAC5 /* PickStationView.xib */; };
-		C38DD0BD24363DDB0079AAC5 /* MKMapView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38DD0BC24363DDB0079AAC5 /* MKMapView+.swift */; };
+		C38DD0B924363B3D0079AAC5 /* MapStationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38DD0B724363B3D0079AAC5 /* MapStationView.swift */; };
+		C38DD0BA24363B3D0079AAC5 /* MapStationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C38DD0B824363B3D0079AAC5 /* MapStationView.xib */; };
 		C38DD0BF243659770079AAC5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C38DD0BE243659770079AAC5 /* MapKit.framework */; };
 		C38DD0C1243676C70079AAC5 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38DD0C0243676C60079AAC5 /* SearchTextField.swift */; };
 		C3ADB776243736C9007E935C /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ADB774243736C9007E935C /* LocationSearchTable.swift */; };
@@ -47,17 +56,26 @@
 /* Begin PBXFileReference section */
 		17D71796A4A21441805B34CC /* Pods-FUELLY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FUELLY.debug.xcconfig"; path = "Target Support Files/Pods-FUELLY/Pods-FUELLY.debug.xcconfig"; sourceTree = "<group>"; };
 		B9CDCE30CDB6BE15CD246991 /* Pods-FUELLY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FUELLY.release.xcconfig"; path = "Target Support Files/Pods-FUELLY/Pods-FUELLY.release.xcconfig"; sourceTree = "<group>"; };
-		C37EF1A1243757BC00FE5A2E /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
-		C37EF1A2243757BC00FE5A2E /* SearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
+		C379B20724376C4D009620BF /* PlacemarkAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacemarkAnnotation.swift; sourceTree = "<group>"; };
+		C379B20924378EF9009620BF /* ViewWithShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewWithShadow.swift; sourceTree = "<group>"; };
+		C379B20B24379D70009620BF /* StationPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationPicker.swift; sourceTree = "<group>"; };
+		C379B20C24379D70009620BF /* StationPicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StationPicker.xib; sourceTree = "<group>"; };
+		C379B20F2437A2C2009620BF /* AddNewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCell.swift; sourceTree = "<group>"; };
+		C379B2102437A2C2009620BF /* AddNewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddNewCell.xib; sourceTree = "<group>"; };
+		C379B2132437ADA4009620BF /* StationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsViewModel.swift; sourceTree = "<group>"; };
+		C379B2152437ADF4009620BF /* StationsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsDataSource.swift; sourceTree = "<group>"; };
+		C379B2172437AEC0009620BF /* StationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationService.swift; sourceTree = "<group>"; };
+		C379B2192437B288009620BF /* GenericDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericDataSource.swift; sourceTree = "<group>"; };
+		C37EF1A1243757BC00FE5A2E /* SimpleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCell.swift; sourceTree = "<group>"; };
+		C37EF1A2243757BC00FE5A2E /* SimpleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleCell.xib; sourceTree = "<group>"; };
 		C38DD0A224352C370079AAC5 /* DynamicValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicValue.swift; sourceTree = "<group>"; };
 		C38DD0A5243543370079AAC5 /* RefillsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefillsDataSource.swift; sourceTree = "<group>"; };
 		C38DD0A82435FF770079AAC5 /* AddRefillController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRefillController.swift; sourceTree = "<group>"; };
 		C38DD0A92435FF770079AAC5 /* AddRefillController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddRefillController.xib; sourceTree = "<group>"; };
 		C38DD0B0243617F70079AAC5 /* Array+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
 		C38DD0B52436310C0079AAC5 /* DefaultButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultButton.swift; sourceTree = "<group>"; };
-		C38DD0B724363B3D0079AAC5 /* PickStationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickStationView.swift; sourceTree = "<group>"; };
-		C38DD0B824363B3D0079AAC5 /* PickStationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PickStationView.xib; sourceTree = "<group>"; };
-		C38DD0BC24363DDB0079AAC5 /* MKMapView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+.swift"; sourceTree = "<group>"; };
+		C38DD0B724363B3D0079AAC5 /* MapStationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapStationView.swift; sourceTree = "<group>"; };
+		C38DD0B824363B3D0079AAC5 /* MapStationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapStationView.xib; sourceTree = "<group>"; };
 		C38DD0BE243659770079AAC5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C38DD0C0243676C60079AAC5 /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
 		C3ADB774243736C9007E935C /* LocationSearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
@@ -121,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				C3D0247024348F57003D4D5C /* RefillsService.swift */,
+				C379B2172437AEC0009620BF /* StationService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -130,6 +149,7 @@
 			children = (
 				C38DD0B52436310C0079AAC5 /* DefaultButton.swift */,
 				C38DD0C0243676C60079AAC5 /* SearchTextField.swift */,
+				C379B20924378EF9009620BF /* ViewWithShadow.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -139,10 +159,12 @@
 			children = (
 				C38DD0A82435FF770079AAC5 /* AddRefillController.swift */,
 				C38DD0A92435FF770079AAC5 /* AddRefillController.xib */,
-				C38DD0B724363B3D0079AAC5 /* PickStationView.swift */,
-				C38DD0B824363B3D0079AAC5 /* PickStationView.xib */,
+				C38DD0B724363B3D0079AAC5 /* MapStationView.swift */,
+				C38DD0B824363B3D0079AAC5 /* MapStationView.xib */,
 				C3ADB774243736C9007E935C /* LocationSearchTable.swift */,
 				C3ADB775243736C9007E935C /* LocationSearchTable.xib */,
+				C379B20B24379D70009620BF /* StationPicker.swift */,
+				C379B20C24379D70009620BF /* StationPicker.xib */,
 			);
 			path = AddRefillViews;
 			sourceTree = "<group>";
@@ -208,6 +230,8 @@
 			children = (
 				C3D0247224349034003D4D5C /* RefillsViewModel.swift */,
 				C38DD0A5243543370079AAC5 /* RefillsDataSource.swift */,
+				C379B2132437ADA4009620BF /* StationsViewModel.swift */,
+				C379B2152437ADF4009620BF /* StationsDataSource.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -218,6 +242,8 @@
 				C3D0246C2433EE9B003D4D5C /* Refill.swift */,
 				C3D0246E2433EEB9003D4D5C /* Station.swift */,
 				C38DD0A224352C370079AAC5 /* DynamicValue.swift */,
+				C379B20724376C4D009620BF /* PlacemarkAnnotation.swift */,
+				C379B2192437B288009620BF /* GenericDataSource.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -236,7 +262,6 @@
 			children = (
 				C3D0247E2434B536003D4D5C /* UIColor+.swift */,
 				C38DD0B0243617F70079AAC5 /* Array+.swift */,
-				C38DD0BC24363DDB0079AAC5 /* MKMapView+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -250,8 +275,10 @@
 				C3D024812434BD9C003D4D5C /* PagerTabCell.xib */,
 				C3D024842434C918003D4D5C /* StationCell.swift */,
 				C3D024852434C918003D4D5C /* StationCell.xib */,
-				C37EF1A1243757BC00FE5A2E /* SearchCell.swift */,
-				C37EF1A2243757BC00FE5A2E /* SearchCell.xib */,
+				C37EF1A1243757BC00FE5A2E /* SimpleCell.swift */,
+				C37EF1A2243757BC00FE5A2E /* SimpleCell.xib */,
+				C379B20F2437A2C2009620BF /* AddNewCell.swift */,
+				C379B2102437A2C2009620BF /* AddNewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -316,15 +343,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C38DD0BA24363B3D0079AAC5 /* PickStationView.xib in Resources */,
+				C38DD0BA24363B3D0079AAC5 /* MapStationView.xib in Resources */,
 				C3D024872434C918003D4D5C /* StationCell.xib in Resources */,
+				C379B2122437A2C2009620BF /* AddNewCell.xib in Resources */,
 				C3ADB777243736C9007E935C /* LocationSearchTable.xib in Resources */,
 				C38DD0AB2435FF770079AAC5 /* AddRefillController.xib in Resources */,
 				C3D0245A2433D811003D4D5C /* LaunchScreen.storyboard in Resources */,
-				C37EF1A4243757BC00FE5A2E /* SearchCell.xib in Resources */,
+				C37EF1A4243757BC00FE5A2E /* SimpleCell.xib in Resources */,
 				C3D024832434BD9C003D4D5C /* PagerTabCell.xib in Resources */,
 				C3D0247D2434975C003D4D5C /* RefillCell.xib in Resources */,
 				C3D024572433D811003D4D5C /* Assets.xcassets in Resources */,
+				C379B20E24379D70009620BF /* StationPicker.xib in Resources */,
 				C3D024552433D80F003D4D5C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,9 +408,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3D0247324349034003D4D5C /* RefillsViewModel.swift in Sources */,
+				C379B2182437AEC0009620BF /* StationService.swift in Sources */,
 				C3D0246A2433EB1E003D4D5C /* StationsController.swift in Sources */,
-				C38DD0B924363B3D0079AAC5 /* PickStationView.swift in Sources */,
-				C38DD0BD24363DDB0079AAC5 /* MKMapView+.swift in Sources */,
+				C38DD0B924363B3D0079AAC5 /* MapStationView.swift in Sources */,
+				C379B20D24379D70009620BF /* StationPicker.swift in Sources */,
 				C3D024522433D80F003D4D5C /* MainPagerTab.swift in Sources */,
 				C3ADB776243736C9007E935C /* LocationSearchTable.swift in Sources */,
 				C3D0247124348F57003D4D5C /* RefillsService.swift in Sources */,
@@ -390,17 +420,23 @@
 				C3D0246F2433EEB9003D4D5C /* Station.swift in Sources */,
 				C3D024822434BD9C003D4D5C /* PagerTabCell.swift in Sources */,
 				C3D024862434C918003D4D5C /* StationCell.swift in Sources */,
+				C379B2142437ADA4009620BF /* StationsViewModel.swift in Sources */,
 				C3D02477243494B1003D4D5C /* RefillsController.swift in Sources */,
 				C3D0247F2434B536003D4D5C /* UIColor+.swift in Sources */,
+				C379B2112437A2C2009620BF /* AddNewCell.swift in Sources */,
+				C379B20A24378EF9009620BF /* ViewWithShadow.swift in Sources */,
 				C38DD0C1243676C70079AAC5 /* SearchTextField.swift in Sources */,
+				C379B20824376C4D009620BF /* PlacemarkAnnotation.swift in Sources */,
+				C379B21A2437B288009620BF /* GenericDataSource.swift in Sources */,
 				C3D0246D2433EE9B003D4D5C /* Refill.swift in Sources */,
 				C3D0247C2434975C003D4D5C /* RefillCell.swift in Sources */,
 				C38DD0B62436310C0079AAC5 /* DefaultButton.swift in Sources */,
 				C38DD0B1243617F70079AAC5 /* Array+.swift in Sources */,
+				C379B2162437ADF4009620BF /* StationsDataSource.swift in Sources */,
 				C38DD0A6243543370079AAC5 /* RefillsDataSource.swift in Sources */,
 				C38DD0A324352C370079AAC5 /* DynamicValue.swift in Sources */,
 				C38DD0AA2435FF770079AAC5 /* AddRefillController.swift in Sources */,
-				C37EF1A3243757BC00FE5A2E /* SearchCell.swift in Sources */,
+				C37EF1A3243757BC00FE5A2E /* SimpleCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,8 +14,11 @@ class MainPagerTab: BaseButtonBarPagerTabStripViewController<PagerTabCell> {
     override func viewDidLoad() {
         buttonBarItemSpec = ButtonBarItemSpec.nibFile(nibName: PagerTabCell.reuseID, bundle: Bundle(for: PagerTabCell.self), width: { _ in return 55.0 })
         
-        settings.style.buttonBarBackgroundColor = .primary()
-        settings.style.selectedBarBackgroundColor = .white
+        let backgroundColor: UIColor = self.traitCollection.userInterfaceStyle == .dark ? #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1) : .primary()
+        view.backgroundColor = backgroundColor
+        buttonBarView.backgroundColor = backgroundColor
+        settings.style.buttonBarBackgroundColor = backgroundColor
+        settings.style.selectedBarBackgroundColor = .primaryLight()
         
         changeCurrentIndexProgressive = { (oldCell: PagerTabCell?, newCell: PagerTabCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
             guard changeCurrentIndex == true else { return }
@@ -35,7 +38,7 @@ class MainPagerTab: BaseButtonBarPagerTabStripViewController<PagerTabCell> {
     }
     
     @IBAction func addAction(_ sender: Any) {
-        let newViewController = PickStationView(nibName: "PickStationView", bundle: nil)
+        let newViewController = AddRefillController(nibName: "AddRefillController", bundle: nil)
         self.present(newViewController, animated: true, completion: nil)
     }
 }

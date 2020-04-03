@@ -7,8 +7,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PickStationView" customModule="FUELLY" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapStationView" customModule="FUELLY" customModuleProvider="target">
             <connections>
+                <outlet property="confirmButton" destination="ROH-Ti-BOV" id="LUl-da-0Yt"/>
                 <outlet property="mapView" destination="rpb-hL-ZGp" id="qJe-WO-wAA"/>
                 <outlet property="searchBarView" destination="etj-nO-Lpw" id="Ex9-rf-hzF"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -22,8 +23,15 @@
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rpb-hL-ZGp">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                 </mapView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="etj-nO-Lpw">
+                    <rect key="frame" x="0.0" y="24" width="320" height="40"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="FTl-4c-Di9"/>
+                    </constraints>
+                </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ojy-WH-hTH" customClass="DefaultButton" customModule="FUELLY" customModuleProvider="target">
-                    <rect key="frame" x="85" y="64" width="150" height="34"/>
+                    <rect key="frame" x="85" y="72" width="150" height="34"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="150" id="Xcl-06-iI2"/>
                     </constraints>
@@ -35,25 +43,43 @@
                         <action selector="searchThisAreaTapped:" destination="-1" eventType="touchUpInside" id="dY1-5o-fZd"/>
                     </connections>
                 </button>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="etj-nO-Lpw">
-                    <rect key="frame" x="0.0" y="16" width="320" height="40"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ROH-Ti-BOV" customClass="DefaultButton" customModule="FUELLY" customModuleProvider="target">
+                    <rect key="frame" x="16" y="418" width="288" height="50"/>
+                    <color key="backgroundColor" red="0.96078431369999995" green="0.85490196080000003" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="ZuM-C5-AwA"/>
+                        <constraint firstAttribute="height" constant="50" id="muj-94-JI7"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
+                    <state key="normal" title="CONFIRM">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N7m-ml-3mg">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="16"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="40" id="FTl-4c-Di9"/>
+                        <constraint firstAttribute="height" constant="16" id="f0Q-Xn-Yy3"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="etj-nO-Lpw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="4P1-vk-JUb"/>
+                <constraint firstItem="etj-nO-Lpw" firstAttribute="top" secondItem="N7m-ml-3mg" secondAttribute="bottom" constant="8" id="2mm-vO-1KO"/>
                 <constraint firstItem="etj-nO-Lpw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="BfY-cw-mLi"/>
                 <constraint firstItem="rpb-hL-ZGp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="EIl-8x-1w0"/>
                 <constraint firstItem="rpb-hL-ZGp" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="HwF-dM-KNP"/>
+                <constraint firstItem="N7m-ml-3mg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Mk9-qP-2m3"/>
+                <constraint firstItem="N7m-ml-3mg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="NiM-JK-WlX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ROH-Ti-BOV" secondAttribute="trailing" constant="16" id="XTh-H4-xzK"/>
                 <constraint firstItem="Ojy-WH-hTH" firstAttribute="top" secondItem="etj-nO-Lpw" secondAttribute="bottom" constant="8" id="Ywx-wf-5eY"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="etj-nO-Lpw" secondAttribute="trailing" id="ZWX-Uz-GK3"/>
+                <constraint firstItem="ROH-Ti-BOV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="cLq-G0-mJk"/>
+                <constraint firstItem="N7m-ml-3mg" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="gRV-Mh-pgr"/>
                 <constraint firstItem="Ojy-WH-hTH" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="jXb-6A-0f4"/>
                 <constraint firstAttribute="bottom" secondItem="rpb-hL-ZGp" secondAttribute="bottom" id="myE-ia-Eot"/>
                 <constraint firstItem="rpb-hL-ZGp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="piy-Is-OrR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ROH-Ti-BOV" secondAttribute="bottom" constant="12" id="qVv-fe-MVs"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="136.875" y="93.75"/>

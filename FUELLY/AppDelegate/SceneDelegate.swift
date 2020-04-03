@@ -19,10 +19,28 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         
+        
+        var config = Realm.Configuration()
+        config.fileURL = config.fileURL!.deletingLastPathComponent().appendingPathComponent("data.realm")
+        Realm.Configuration.defaultConfiguration = config
+        
         let realm = try! Realm()
         try! realm.write {
           realm.deleteAll()
+            
+            let st1 = Station()
+            st1.supplier = "KLO"
+            st1.address = "проспект Генерала Ватутина 2"
+            let ref1 = Refill()
+            ref1.price = 246.0
+            ref1.quantity = 10
+            ref1.station = st1
+            
+            realm.add(st1)
+            realm.add(ref1)
+            
         }
+        
         
         guard let _ = (scene as? UIWindowScene) else { return }
     }

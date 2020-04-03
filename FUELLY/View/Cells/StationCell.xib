@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,8 +16,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="457" height="310"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O1o-RD-DUM">
-                        <rect key="frame" x="8" y="0.0" width="441" height="310"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O1o-RD-DUM" customClass="ViewWithShadow" customModule="FUELLY" customModuleProvider="target">
+                        <rect key="frame" x="8" y="4" width="441" height="300"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WOG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbN-EJ-E1l">
                                 <rect key="frame" x="16" y="16" width="409" height="36"/>
@@ -46,7 +46,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total: ₴ 4264,00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PK2-3h-zGW">
-                                <rect key="frame" x="16" y="266" width="409" height="36"/>
+                                <rect key="frame" x="16" y="256" width="409" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="9nH-gy-P4I"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="iFg-DK-kaP"/>
@@ -56,7 +56,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last month: ₴ 264,00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xj9-EE-QvB">
-                                <rect key="frame" x="16" y="244" width="409" height="22"/>
+                                <rect key="frame" x="16" y="234" width="409" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="iPj-sL-I5e"/>
                                 </constraints>
@@ -65,7 +65,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visits: 20" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhg-Rf-Ez8">
-                                <rect key="frame" x="16" y="222" width="409" height="22"/>
+                                <rect key="frame" x="16" y="212" width="409" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="5nx-W6-HVB"/>
                                 </constraints>
@@ -101,9 +101,9 @@
             </view>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="O1o-RD-DUM" secondAttribute="trailing" constant="8" id="44o-ii-wl6"/>
-                <constraint firstItem="O1o-RD-DUM" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="6Mb-TS-Db4"/>
+                <constraint firstItem="O1o-RD-DUM" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="4" id="6Mb-TS-Db4"/>
                 <constraint firstItem="O1o-RD-DUM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="NRl-hX-uNh"/>
-                <constraint firstAttribute="bottom" secondItem="O1o-RD-DUM" secondAttribute="bottom" id="bbD-kQ-2eQ"/>
+                <constraint firstAttribute="bottom" secondItem="O1o-RD-DUM" secondAttribute="bottom" constant="6" id="bbD-kQ-2eQ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="457" height="310"/>

@@ -12,8 +12,11 @@ import XLPagerTabStrip
 
 class StationsController: UIViewController {
 
+    var viewModel = StationsViewModel.shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.fetch()
         setupCollectionView()
     }
     
@@ -22,10 +25,24 @@ class StationsController: UIViewController {
         layout.sectionInset = UIEdgeInsets(top: 10, left: 0, bottom: 200, right: 0)
         
         let collectionView: UICollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
-        collectionView.dataSource = self
+        collectionView.dataSource = viewModel.dataSource
         collectionView.delegate = self
         collectionView.register(StationCell.nib, forCellWithReuseIdentifier: StationCell.reuseID)
         collectionView.contentInset = .zero
+        collectionView.backgroundColor = .systemBackground
+        
+        self.viewModel.dataSource.addAndNotify(observer: self) { state in
+            switch state.stateChange {
+                case let .reload(ref):
+                    print("reload \(ref.count)")
+                case let .insert(r, indexPath):
+                    print("insert \(r)")
+                case let .delete(indexPath):
+                    print("delete")
+            }
+            
+            collectionView.reloadData()
+        }
         
         self.view.addSubview(collectionView)
     }
@@ -50,7 +67,13 @@ extension StationsController: UICollectionViewDataSource, UICollectionViewDelega
         return CGSize(width: collectionView.frame.size.width, height: 230)
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
 }
 
 extension StationsController: IndicatorInfoProvider {

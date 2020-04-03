@@ -25,7 +25,6 @@ final class RefillsService {
         try! realm.write {
             realm.add(refill)
             completion(.success(refill))
-            print("saved")
         }
     }
     

@@ -9,22 +9,33 @@
 import UIKit
 import MapKit
 
-class PickStationView: UIViewController {
+class MapStationView: UIViewController {
 
     @IBOutlet private var mapView: MKMapView!
     @IBOutlet private var searchBarView: UIView!
+    @IBOutlet weak var confirmButton: DefaultButton!
     let locationManager = CLLocationManager()
     var resultSearchController:UISearchController? = nil
-    var selectedPin: MKPlacemark? = nil
+    
+    var selectedPin: DynamicValue<MKPlacemark?> = DynamicValue(nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         setUpMapView()
         setupSearch()
+        
+        let gestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(handleTap))
+        mapView.addGestureRecognizer(gestureRecognizer)
+        
+        
+        selectedPin.addAndNotify(observer: self) { (newPlacemark) in
+            self.confirmButton.isHidden = newPlacemark == nil
+        }
     }
     
     func setUpMapView() {
+        mapView.delegate = self
         mapView.showsUserLocation = true
         mapView.showsCompass = false
         mapView.showsScale = false
@@ -34,11 +45,7 @@ class PickStationView: UIViewController {
     func currentLocation() {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        if #available(iOS 11.0, *) {
-            locationManager.showsBackgroundLocationIndicator = true
-        } else {
-            // Fallback on earlier versions
-        }
+        locationManager.showsBackgroundLocationIndicator = true
         locationManager.startUpdatingLocation()
     }
     
@@ -54,12 +61,9 @@ class PickStationView: UIViewController {
             }
 
             self.mapView.removeAnnotations(self.mapView.annotations)
+            self.selectedPin.value = nil
             for item in response.mapItems {
-                let coords = item.placemark.coordinate
-                let pin = StationAnnotation(
-                    title: item.name,
-                    locationName: item.name,
-                    coordinate: coords)
+                let pin = PlacemarkAnnotation(placemark: item.placemark)
                 self.mapView.addAnnotation(pin)
             }
         }
@@ -68,12 +72,28 @@ class PickStationView: UIViewController {
     
     @IBAction func searchThisAreaTapped(_ sender: Any) {
         searchStations()
+    }
+    
+    @objc func handleTap(gestureRecognizer: UILongPressGestureRecognizer) {
+
+        let viewCoord = gestureRecognizer.location(in: mapView)
+        let coordinate = mapView.convert (viewCoord, toCoordinateFrom: mapView)
+        let location = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
         
+        let geocoder = CLGeocoder()
+        geocoder.reverseGeocodeLocation( location, completionHandler: { (placemarks, error) in
+            guard let clplacemark = placemarks?[0] else {return}
+            let placemark = MKPlacemark(placemark: clplacemark)
+            
+            let annotation = PlacemarkAnnotation(placemark: placemark)
+            annotation.coordinate = coordinate
+            self.mapView.removeAnnotations(self.mapView.annotations)
+            self.mapView.addAnnotation(annotation)
+            self.selectedPin.value = placemark
+        })
     }
 }
-
-
-extension PickStationView {
+extension MapStationView {
     
     func setupSearch() {
         let locationSearchTable = LocationSearchTable(nibName: "LocationSearchTable", bundle: nil)
@@ -84,11 +104,8 @@ extension PickStationView {
         let searchBar = resultSearchController!.searchBar
         searchBar.sizeToFit()
         searchBar.placeholder = "Search for stations"
-       
         
         if let textfield = searchBar.value(forKey: "searchField") as? UITextField {
-//            textfield.backgroundColor = .white
-            
             textfield.layer.cornerRadius = 10.0
             textfield.layer.borderWidth = 1.0
             textfield.layer.borderColor = UIColor.clear.cgColor
@@ -102,11 +119,7 @@ extension PickStationView {
         navigationItem.searchController = resultSearchController
         
         searchBarView.addSubview(searchBar)
-//        searchBar.center = CGPoint(x: searchBar.center.x,
-//        y: searchBarView.frame.size.height / 2 + 10)
         
-        resultSearchController?.hidesNavigationBarDuringPresentation = false
-//        resultSearchController?.dimsBackgroundDuringPresentation = true
         definesPresentationContext = true
         
         locationSearchTable.mapView = mapView
@@ -115,19 +128,13 @@ extension PickStationView {
     
 }
 
-extension PickStationView: HandleMapSearch {
+extension MapStationView: HandleMapSearch {
     func dropPinZoomIn(placemark:MKPlacemark) {
-        // cache the pin
-        selectedPin = placemark
-        // clear existing pins
+
+        selectedPin.value = placemark
         mapView.removeAnnotations(mapView.annotations)
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = placemark.coordinate
-        annotation.title = placemark.name
-        if let city = placemark.locality,
-        let state = placemark.administrativeArea {
-            annotation.subtitle = "\(city) \(state)"
-        }
+        
+        let annotation = PlacemarkAnnotation(placemark: placemark)
         mapView.addAnnotation(annotation)
         let region = MKCoordinateRegion(center: placemark.coordinate, latitudinalMeters: 800, longitudinalMeters: 800)
         mapView.setRegion(region, animated: true)
@@ -136,7 +143,7 @@ extension PickStationView: HandleMapSearch {
 }
 
 
-extension PickStationView: CLLocationManagerDelegate {
+extension MapStationView: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations.last! as CLLocation
         let currentLocation = location.coordinate
@@ -148,5 +155,15 @@ extension PickStationView: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
        print(error.localizedDescription)
+    }
+}
+
+extension MapStationView: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        guard let placemarkAnnotation = view.annotation as? PlacemarkAnnotation else {
+            self.selectedPin.value = nil
+            return
+        }
+        self.selectedPin.value = placemarkAnnotation.placemark
     }
 }
