@@ -40,6 +40,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             realm.add(ref1)
             realm.add(ref1)
             
+            
+            FirestoreSyncService<Refill>().add(data: ref1)
+            FirestoreSyncService<Station>().add(data: st1)
+            
         }
         
         

@@ -8,8 +8,9 @@
 
 import Foundation
 import RealmSwift
+import FirebaseFirestore
 
-class Refill: Object, Comparable {
+class Refill: SyncObject, Comparable {
     @objc dynamic var id = UUID().uuidString
     @objc dynamic var date: Date = Date()
     @objc dynamic var price: Float = 0.0
@@ -19,6 +20,32 @@ class Refill: Object, Comparable {
     
     override static func primaryKey() -> String? {
         return "id"
+    }
+    
+    override var path: String {
+        return "refills"
+    }
+    
+    override var uid: String {
+        return id
+    }
+    
+    override func dictionary() -> [String:Any] {
+        var dict: [String:Any] = [
+            "id": id,
+            "date": date,
+            "price": price,
+            "quantity": quantity,
+            "fuelType": fuelType ?? "none"
+        ]
+        
+        if let station = station {
+            let stationRef: DocumentReference!
+            stationRef = DB_USER.document(DEVICE_ID).collection(station.path).document(station.uid)
+            print(stationRef)
+            dict["station"] = stationRef
+        }
+        return dict
     }
     
     static func sortByDate (lhs: Refill, rhs: Refill) -> Bool {

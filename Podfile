@@ -6,4 +6,6 @@ target 'FUELLY' do
   pod 'XLPagerTabStrip', '~> 9.0'
   pod 'RealmSwift'
 #  pod 'Alamofire', '~> 5.0'
+  pod 'Firebase'
+  pod 'FirebaseFirestore'
 end

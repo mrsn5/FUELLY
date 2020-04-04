@@ -10,13 +10,32 @@ import Foundation
 import RealmSwift
 import MapKit
 
-class Station: Object, Comparable {
+class Station: SyncObject, Comparable {
     @objc dynamic var id = UUID().uuidString
     @objc dynamic var address: String = ""
     @objc dynamic var supplier: String = ""
     @objc dynamic var lon: Double = 0.0
     @objc dynamic var lat: Double = 0.0
+    
     let refills = LinkingObjects(fromType: Refill.self, property: "station")
+    
+    override func dictionary() -> [String:Any] {
+        return [
+            "id": id,
+            "address": address,
+            "supplier": supplier,
+            "lon": lon,
+            "lat": lat
+        ]
+    }
+    
+    override var path: String {
+        return "stations"
+    }
+    
+    override var uid: String {
+        return id
+    }
     
     override static func primaryKey() -> String? {
         return "id"

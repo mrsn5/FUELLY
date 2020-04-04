@@ -14,7 +14,7 @@ final class RefillsViewModel {
     let dataSource = RefillsDataSource()
     
     func fetch() {
-        RefillsService.shared.fetch() { result in
+        RefillsService.shared.fetch(sortedBy: "date", ascending: false) { result in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let refills):

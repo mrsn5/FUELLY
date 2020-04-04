@@ -11,6 +11,9 @@
 		C3548FF2243889870040FB26 /* DateFormatter+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3548FF1243889870040FB26 /* DateFormatter+.swift */; };
 		C3548FF424389A780040FB26 /* Realm+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3548FF324389A780040FB26 /* Realm+.swift */; };
 		C3548FF62438AB200040FB26 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C3548FF52438AB200040FB26 /* GoogleService-Info.plist */; };
+		C3548FF82438B08C0040FB26 /* FirestoreSyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3548FF72438B08C0040FB26 /* FirestoreSyncService.swift */; };
+		C3548FFA2438CC570040FB26 /* GenericService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3548FF92438CC570040FB26 /* GenericService.swift */; };
+		C3548FFE2438DA5C0040FB26 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3548FFD2438DA5C0040FB26 /* Constants.swift */; };
 		C379B20824376C4D009620BF /* PlacemarkAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C379B20724376C4D009620BF /* PlacemarkAnnotation.swift */; };
 		C379B20A24378EF9009620BF /* ViewWithShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C379B20924378EF9009620BF /* ViewWithShadow.swift */; };
 		C379B20D24379D70009620BF /* StationPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C379B20B24379D70009620BF /* StationPicker.swift */; };
@@ -64,6 +67,9 @@
 		C3548FF1243889870040FB26 /* DateFormatter+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+.swift"; sourceTree = "<group>"; };
 		C3548FF324389A780040FB26 /* Realm+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+.swift"; sourceTree = "<group>"; };
 		C3548FF52438AB200040FB26 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C3548FF72438B08C0040FB26 /* FirestoreSyncService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreSyncService.swift; sourceTree = "<group>"; };
+		C3548FF92438CC570040FB26 /* GenericService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericService.swift; sourceTree = "<group>"; };
+		C3548FFD2438DA5C0040FB26 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C379B20724376C4D009620BF /* PlacemarkAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacemarkAnnotation.swift; sourceTree = "<group>"; };
 		C379B20924378EF9009620BF /* ViewWithShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewWithShadow.swift; sourceTree = "<group>"; };
 		C379B20B24379D70009620BF /* StationPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationPicker.swift; sourceTree = "<group>"; };
@@ -171,8 +177,10 @@
 		C38DD0A424352D0D0079AAC5 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				C3548FF92438CC570040FB26 /* GenericService.swift */,
 				C3D0247024348F57003D4D5C /* RefillsService.swift */,
 				C379B2172437AEC0009620BF /* StationService.swift */,
+				C3548FF72438B08C0040FB26 /* FirestoreSyncService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -217,9 +225,9 @@
 		C3D0244C2433D80F003D4D5C /* FUELLY */ = {
 			isa = PBXGroup;
 			children = (
+				C3548FF52438AB200040FB26 /* GoogleService-Info.plist */,
 				C3D02474243490ED003D4D5C /* Extensions */,
 				C3D024662433DB52003D4D5C /* AppDelegate */,
-				C3D024622433DAEB003D4D5C /* Config */,
 				C38DD0A424352D0D0079AAC5 /* Service */,
 				C3D024642433DAFC003D4D5C /* Model */,
 				C3D024632433DAF1003D4D5C /* ViewModel */,
@@ -244,14 +252,6 @@
 				C3D024692433EB1E003D4D5C /* StationsController.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		C3D024622433DAEB003D4D5C /* Config */ = {
-			isa = PBXGroup;
-			children = (
-				C3548FF52438AB200040FB26 /* GoogleService-Info.plist */,
-			);
-			path = Config;
 			sourceTree = "<group>";
 		};
 		C3D024632433DAF1003D4D5C /* ViewModel */ = {
@@ -293,6 +293,7 @@
 				C38DD0B0243617F70079AAC5 /* Array+.swift */,
 				C3548FF1243889870040FB26 /* DateFormatter+.swift */,
 				C3548FF324389A780040FB26 /* Realm+.swift */,
+				C3548FFD2438DA5C0040FB26 /* Constants.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -463,6 +464,7 @@
 				C379B20A24378EF9009620BF /* ViewWithShadow.swift in Sources */,
 				C38DD0C1243676C70079AAC5 /* SearchTextField.swift in Sources */,
 				C379B20824376C4D009620BF /* PlacemarkAnnotation.swift in Sources */,
+				C3548FFA2438CC570040FB26 /* GenericService.swift in Sources */,
 				C379B21A2437B288009620BF /* GenericDataSource.swift in Sources */,
 				C3D0246D2433EE9B003D4D5C /* Refill.swift in Sources */,
 				C3D0247C2434975C003D4D5C /* RefillCell.swift in Sources */,
@@ -471,8 +473,10 @@
 				C379B2162437ADF4009620BF /* StationsDataSource.swift in Sources */,
 				C38DD0A6243543370079AAC5 /* RefillsDataSource.swift in Sources */,
 				C38DD0A324352C370079AAC5 /* DynamicValue.swift in Sources */,
+				C3548FF82438B08C0040FB26 /* FirestoreSyncService.swift in Sources */,
 				C38DD0AA2435FF770079AAC5 /* RefillEditController.swift in Sources */,
 				C37EF1A3243757BC00FE5A2E /* SimpleCell.swift in Sources */,
+				C3548FFE2438DA5C0040FB26 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

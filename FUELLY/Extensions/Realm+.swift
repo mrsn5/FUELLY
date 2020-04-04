@@ -16,3 +16,32 @@ extension Object {
         }
     }
 }
+
+protocol RealmToDictionary {
+    func dictionary() -> [String:Any]
+}
+
+class SyncObject: Object, RealmToDictionary, Identifiable {
+    
+    
+    @objc dynamic var isSync: Bool = false
+    
+    var uid: String {
+        return UUID.init().uuidString
+    }
+    
+    var path: String {
+        return "object"
+    }
+    
+    
+    func dictionary() -> [String : Any] {
+        return [:]
+    }
+    
+    override static func ignoredProperties() -> [String] {
+        return ["path", "uid"]
+    }
+    
+}
+

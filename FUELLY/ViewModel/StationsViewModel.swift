@@ -14,7 +14,7 @@ final class StationsViewModel {
     let dataSource = StationsDataSource()
     
     func fetch() {
-        StationsService.shared.fetch() { result in
+        StationsService.shared.fetch(sortedBy: "supplier", ascending: false) { result in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let refills):
