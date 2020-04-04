@@ -1,5 +1,6 @@
 # FUELLY
 
-![Main page](https://github.com/clamour-project/clamour-ios/blob/master/Clamour/Sample/1.PNG?raw=true)
-![Matcher](https://github.com/clamour-project/clamour-ios/blob/master/Clamour/Sample/2.PNG?raw=true)
-![Matcher](https://github.com/clamour-project/clamour-ios/blob/master/Clamour/Sample/3.PNG?raw=true)
+
+![](https://github.com/mrsn5/FUELLY/blob/master/Screens/1.gif?raw=true)       |  ![](https://github.com/mrsn5/FUELLY/blob/master/Screens/2.gif?raw=true)
+:-------------------------:|:-------------------------:
+![](https://github.com/mrsn5/FUELLY/blob/master/Screens/3.gif?raw=true)  |  ![](https://github.com/mrsn5/FUELLY/blob/master/Screens/4.gif?raw=true)
