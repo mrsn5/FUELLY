@@ -29,7 +29,10 @@ final class StationsService {
         }
     }
     
-    func delete(_ refill: Refill) {
-        
+    func delete(_ station: Station, _ completion: @escaping ((Result<Station, Error>) -> Void)) {
+        try! realm.write {
+            realm.delete(station)
+            completion(.success(station))
+        } 
     }
 }

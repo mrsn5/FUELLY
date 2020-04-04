@@ -80,6 +80,9 @@
                     <state key="normal" image="trash">
                         <color key="titleColor" red="0.96078431369999995" green="0.85490196080000003" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </state>
+                    <connections>
+                        <action selector="deleteTap:" destination="-1" eventType="touchUpInside" id="BbM-Hi-m4k"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

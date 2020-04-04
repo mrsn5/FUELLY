@@ -53,5 +53,23 @@ final class StationsViewModel {
         }
     }
     
+    func delete(_ station: Station) {
+        StationsService.shared.delete(station) { result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let station):
+                    let data = self.dataSource.value.data
+                    if let row = data.firstIndex(of: station) {
+                        self.dataSource.value.stateChange = .delete(IndexPath(row: row, section: 0))
+                        self.dataSource.value.stateChange = .none
+                    }
+                    break
+                case .failure(let error):
+                    print("Parser error \(error)")
+                    break
+                }
+            }
+        }
+    }
     
 }

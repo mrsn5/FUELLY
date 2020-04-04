@@ -20,6 +20,7 @@ class StationEditController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        definesPresentationContext = true
         deleteButton.isHidden = !editingMode
         supplierField.text = station.supplier
         addressField.text = station.address
@@ -31,10 +32,17 @@ class StationEditController: UIViewController {
     @IBAction func save(_ sender: Any) {
         guard let supplier = supplierField.text, let address = addressField.text else { return }
 
-        station.supplier = supplier
-        station.address = address
+        Station.update {
+            station.supplier = supplier
+            station.address = address
+        }
         viewModel.save(station)
         dismiss(animated: true, completion: dismissCallback)
+    }
+    
+    @IBAction func deleteTap(_ sender: Any) {
+        viewModel.delete(station)
+        dismiss(animated: true, completion: nil)
     }
     
     @objc func dismissKeyboard (_ sender: UITapGestureRecognizer) {

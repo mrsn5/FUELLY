@@ -30,8 +30,8 @@ class StationCell: UICollectionViewCell {
         supplierLabel.text = station.supplier
         addressLabel.text = station.address
         visitsCounter.text = "Visits: \(station.refills.count)"
-        totalLabel.text = "Total: ₴ 0.00"
-        lastMonthLabel.text = "Last month: ₴ 0.00"
+        totalLabel.text = "Total: ₴ -/-"
+        lastMonthLabel.text = "Last month: ₴ -/-"
         
         let stationRef = ThreadSafeReference(to: station)
         DispatchQueue(label: "background").async {
@@ -48,8 +48,8 @@ class StationCell: UICollectionViewCell {
                     }
                 }
                 DispatchQueue.main.async { [weak self] in
-                    self?.totalLabel.text = "Total: ₴ \(total)"
-                    self?.lastMonthLabel.text = "Last month: ₴  \(lastMonth)"
+                    self?.totalLabel.text = String(format: "Total: ₴ %.2f", total)
+                    self?.lastMonthLabel.text = String(format: "Last month: ₴ %.2f", lastMonth)
                 }
                 
             }

@@ -28,7 +28,6 @@ class RefillEditController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        definesPresentationContext = true
         setupRefill()
         
         let dismissGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))

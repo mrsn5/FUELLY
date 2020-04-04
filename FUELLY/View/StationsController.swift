@@ -76,10 +76,12 @@ extension StationsController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let editRefillController = EditRefillController(nibName: "EditRefillController", bundle: nil)
-//        editRefillController.refill = viewModel.dataSource.value.data[indexPath.row]
-//        editRefillController.editingMode = true
-//        self.present(editRefillController, animated: true, completion: nil)
+        let stationEditController = StationEditController(nibName: "StationEditController", bundle: nil)
+        
+        let station = viewModel.dataSource.value.data[indexPath.row]
+        stationEditController.station = station
+        stationEditController.editingMode = true
+        self.present(stationEditController, animated: true, completion: nil)
     }
 }
 

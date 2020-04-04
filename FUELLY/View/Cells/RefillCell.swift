@@ -32,7 +32,7 @@ class RefillCell: UICollectionViewCell {
     }
     
     func configure(_ refill: Refill) {
-        totalLabel.text = "₴ \(refill.price)"
+        totalLabel.text = String(format: "₴ %.2f", refill.price)
         priceInfo.text = String(format: "₴ %.2f × %.2f", refill.price / refill.quantity, refill.quantity)
         
         stationName.text = refill.station?.supplier
