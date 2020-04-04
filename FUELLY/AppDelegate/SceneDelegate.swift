@@ -7,7 +7,8 @@
 //
 
 import UIKit
-import RealmSwift
+import RealmSwift //
+
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -27,7 +28,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let realm = try! Realm()
         try! realm.write {
           realm.deleteAll()
-            
+
             let st1 = Station()
             st1.supplier = "KLO"
             st1.address = "проспект Генерала Ватутина 2"
@@ -35,16 +36,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             ref1.price = 246.0
             ref1.quantity = 10
             ref1.station = st1
-            
+
             realm.add(st1)
             realm.add(ref1)
             realm.add(ref1)
-            
-            
-            FirestoreSyncService<Refill>().add(data: ref1)
-            FirestoreSyncService<Station>().add(data: st1)
-            
+
+
         }
+    
         
         
         guard let _ = (scene as? UIWindowScene) else { return }

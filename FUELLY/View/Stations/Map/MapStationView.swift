@@ -55,6 +55,7 @@ class MapStationView: UIViewController {
     func searchStations() {
         let request = MKLocalSearch.Request()
         request.naturalLanguageQuery = "gas station"
+        
         request.region = mapView.region
         let search = MKLocalSearch(request: request)
         search.start { response, error in

@@ -9,29 +9,54 @@
 import Foundation
 import Firebase
 import RealmSwift
+import Network
 
 class FirestoreSyncService<T: SyncObject> {
     
-    let realm = try! Realm()
+    var resync = false
+    let monitor = NWPathMonitor()
     
-    init() {
-        print("INIT \(T.self)")
-        let results = Array(self.realm.objects(T.self).filter("isSync == false"))
-        for r in results {
-            add(data: r)
+    init(comletion: @escaping (Bool) -> Void = { _ in }) {
+        monitor.pathUpdateHandler = { [weak self] path in
+            if path.status == .satisfied {
+                self?.sync()
+                self?.monitor.cancel()
+                comletion(self?.resync ?? false)
+            } 
+        }
+        let queue = DispatchQueue(label: "monitor")
+        monitor.start(queue: queue)
+    }
+    
+    func sync() {
+        DispatchQueue.global(qos: .background).async {
+            let realm = try! Realm()
+            self.resync = false
+            let results = Array(realm.objects(T.self).filter("isSync == false"))
+            for r in results {
+                let ref = ThreadSafeReference(to: r)
+                self.add(ref)
+            }
         }
     }
     
-    deinit {
-        print("DEINIT \(T.self)")
-    }
-    
-    func add(data: T) {
+    private func add(_ ref: ThreadSafeReference<T>) {
+        let realm = try! Realm()
+        guard let data = realm.resolve(ref) else { return }
+        let ref = ThreadSafeReference(to: data)
+        
         DB_USER.document(DEVICE_ID).collection(data.path).document(data.uid).setData(data.dictionary()) { err in
             if let err = err {
                 print("Error updating document: \(err)")
             } else {
-                print("Document successfully updated")
+                let realm = try! Realm()
+                guard let data = realm.resolve(ref) else { return }
+                
+                try! realm.write {
+                    data.isSync = true
+                    realm.add(data)
+                }
+                print("Document sync successfully")
             }
         }
     }

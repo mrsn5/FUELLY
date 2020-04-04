@@ -36,13 +36,13 @@ class Refill: SyncObject, Comparable {
             "date": date,
             "price": price,
             "quantity": quantity,
-            "fuelType": fuelType ?? "none"
+            "fuelType": fuelType ?? NSNull(),
+            "station": NSNull()
         ]
         
         if let station = station {
             let stationRef: DocumentReference!
             stationRef = DB_USER.document(DEVICE_ID).collection(station.path).document(station.uid)
-            print(stationRef)
             dict["station"] = stationRef
         }
         return dict

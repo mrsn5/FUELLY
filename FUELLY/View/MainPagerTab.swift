@@ -8,6 +8,7 @@
 
 import UIKit
 import XLPagerTabStrip
+import Network
 
 class MainPagerTab: BaseButtonBarPagerTabStripViewController<PagerTabCell> {
 
@@ -25,7 +26,6 @@ class MainPagerTab: BaseButtonBarPagerTabStripViewController<PagerTabCell> {
             oldCell?.iconImage.tintColor = .primaryLight()
             newCell?.iconImage.tintColor = .white
         }
-        
         super.viewDidLoad()
     }
 
