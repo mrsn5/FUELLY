@@ -38,8 +38,8 @@ class MainPagerTab: BaseButtonBarPagerTabStripViewController<PagerTabCell> {
     }
     
     @IBAction func addAction(_ sender: Any) {
-        let newViewController = AddRefillController(nibName: "AddRefillController", bundle: nil)
-        self.present(newViewController, animated: true, completion: nil)
+        let addRefillController = RefillEditController(nibName: "RefillEditController", bundle: nil)
+        self.present(addRefillController, animated: true, completion: nil)
     }
 }
 

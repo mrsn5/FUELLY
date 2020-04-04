@@ -12,7 +12,8 @@ class RefillCell: UICollectionViewCell {
 
     static let reuseID = String(describing: RefillCell.self)
     static let nib = UINib(nibName: String(describing: RefillCell.self), bundle: nil)
-
+    
+    
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var priceInfo: UILabel!
     
@@ -32,11 +33,13 @@ class RefillCell: UICollectionViewCell {
     
     func configure(_ refill: Refill) {
         totalLabel.text = "₴ \(refill.price)"
-        priceInfo.text = "₴ \(refill.price / refill.quantity) × \(refill.quantity)"
+        priceInfo.text = String(format: "₴ %.2f × %.2f", refill.price / refill.quantity, refill.quantity)
+        
         stationName.text = refill.station?.supplier
         stationAddress.text = refill.station?.address
         
-        //timeLabel.text = refill.date
+        
+        timeLabel.text = DateFormatter.standart(date: refill.date)
     }
     
 }

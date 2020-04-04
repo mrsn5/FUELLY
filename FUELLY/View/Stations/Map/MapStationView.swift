@@ -79,7 +79,7 @@ class MapStationView: UIViewController {
     
     @IBAction func confirmed(_ sender: Any) {
         guard let placemark = selectedPin.value else { return }
-        let stationCreationView = StationCreationView(nibName: "StationCreationView", bundle: nil)
+        let stationCreationView = StationEditController(nibName: "StationEditController", bundle: nil)
         stationCreationView.station = Station(placemark: placemark)
         stationCreationView.dismissCallback = {
             self.dismiss(animated: true, completion: self.dismissCallback)

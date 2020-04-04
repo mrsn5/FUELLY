@@ -8,21 +8,28 @@
 
 import UIKit
 
-class AddRefillController: UIViewController {
-
-    var viewModel = RefillsViewModel.shared
-    var stationsViewModel = StationsViewModel.shared
+class RefillEditController: UIViewController {
     
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var quantityField: UITextField!
     @IBOutlet weak var fuelField: UITextField!
     @IBOutlet weak var priceField: UITextField!
     @IBOutlet weak var stationButton: UIButton!
+    @IBOutlet weak var deleteButton: UIButton!
+    
+    var viewModel = RefillsViewModel.shared
+    var stationsViewModel = StationsViewModel.shared
     
     var refill: Refill = Refill()
+    var editingMode = false
+    
     var selectedStation: DynamicValue<Station?> = DynamicValue(nil)
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupRefill()
+        
         let dismissGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
         self.view.addGestureRecognizer(dismissGesture)
         
@@ -37,25 +44,38 @@ class AddRefillController: UIViewController {
         }
         
         stationsViewModel.dataSource.addAndNotify(observer: self) { (state) in
-            print("CHANGEEEEEEE \(state)")
             switch state.stateChange {
             case let .insert(s, _):
-                print("CHANGEEEEEEE \(s)")
                 self.selectedStation.value = s
             default:
                 break
             }
         }
     }
+    
+    func setupRefill() {
+        if editingMode {
+            deleteButton.isHidden = false
+            titleLabel.text = "EDIT REFILL"
+            fuelField.text = refill.fuelType
+            quantityField.text = "\(refill.quantity)"
+            priceField.text = "\(refill.price)"
+            selectedStation.value = refill.station
+        }
+    }
+    
     @IBAction func confirmed(_ sender: Any) {
         guard let station = selectedStation.value else { return }
         guard let priceText = priceField.text, let total = Float(priceText) else { return }
         guard let quantityText = quantityField.text, let quantity = Float(quantityText) else { return }
-        refill.station = station
-        refill.price = total
-        refill.quantity = quantity
-        refill.fuelType = fuelField.text
         
+        Refill.update {
+            refill.station = station
+            refill.price = total
+            refill.quantity = quantity
+            refill.fuelType = fuelField.text
+        }
+
         viewModel.save(refill)
         self.dismiss(animated: true, completion: nil)
     }
@@ -66,13 +86,15 @@ class AddRefillController: UIViewController {
         self.present(stationPicker, animated: true, completion: nil)
     }
     
+    @IBAction func deleteTapped(_ sender: Any) {
+        viewModel.delete(refill)
+        dismiss(animated: true, completion: nil)
+    }
+    
     @objc func dismissKeyboard (_ sender: UITapGestureRecognizer) {
         quantityField.resignFirstResponder()
         fuelField.resignFirstResponder()
         priceField.resignFirstResponder()
     }
-    
-    @objc func stationFieldTapped (_ sender: UITapGestureRecognizer) {
-        print("TAPTAP")
-    }
+
 }

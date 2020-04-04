@@ -33,17 +33,15 @@ class StationsController: UIViewController {
         
         self.viewModel.dataSource.addAndNotify(observer: self) { state in
             switch state.stateChange {
-                case let .reload(ref):
-                    print("reload \(ref.count)")
-                case let .insert(r, indexPath):
-                    print("insert \(r)")
-                case let .delete(indexPath):
-                    print("delete")
-                default:
-                    break
+            case .reload(_):
+                collectionView.reloadData()
+            case let .insert(_, indexPath):
+                collectionView.insertItems(at: [indexPath])
+            case let .delete(indexPath):
+                collectionView.deleteItems(at: [indexPath])
+            default:
+                break
             }
-            print(" +++ \(self.viewModel.dataSource.value.data.count)")
-            collectionView.reloadData()
         }
         
         self.view.addSubview(collectionView)
@@ -75,6 +73,13 @@ extension StationsController: UICollectionViewDataSource, UICollectionViewDelega
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let editRefillController = EditRefillController(nibName: "EditRefillController", bundle: nil)
+//        editRefillController.refill = viewModel.dataSource.value.data[indexPath.row]
+//        editRefillController.editingMode = true
+//        self.present(editRefillController, animated: true, completion: nil)
     }
 }
 

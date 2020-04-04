@@ -38,10 +38,12 @@ final class RefillsViewModel {
                     if let row = data.firstIndex(of: refill) {
                         self.dataSource.value.stateChange = .delete(IndexPath(row: row, section: 0))
                         self.dataSource.value.stateChange = .insert(refill, (IndexPath(row: row, section: 0)))
+                        self.dataSource.value.stateChange = .none
                     } else {
                         let row = data.insertBySortIndex(refill, isOrderedBefore: { $0 > $1 })
                         if (row < data.count || row == 0) {
                             self.dataSource.value.stateChange = .insert(refill, IndexPath(row: row, section: 0))
+                            self.dataSource.value.stateChange = .none
                         }
                     }
                     break
@@ -53,5 +55,24 @@ final class RefillsViewModel {
         }
     }
     
+    
+    func delete(_ refill: Refill) {
+        RefillsService.shared.delete(refill) { result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let refill):
+                    let data = self.dataSource.value.data
+                    if let row = data.firstIndex(of: refill) {
+                        self.dataSource.value.stateChange = .delete(IndexPath(row: row, section: 0))
+                        self.dataSource.value.stateChange = .none
+                    }
+                    break
+                case .failure(let error):
+                    print("Parser error \(error)")
+                    break
+                }
+            }
+        }
+    }
     
 }

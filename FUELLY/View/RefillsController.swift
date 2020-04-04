@@ -33,17 +33,15 @@ class RefillsController: UIViewController {
         
         self.viewModel.dataSource.addAndNotify(observer: self) { state in
             switch state.stateChange {
-            case let .reload(ref):
-                print("reload \(ref.count)")
-            case let .insert(r, indexPath):
-                print("insert \(r)")
+            case .reload(_):
+                collectionView.reloadData()
+            case let .insert(_, indexPath):
+                collectionView.insertItems(at: [indexPath])
             case let .delete(indexPath):
-                print("delete")
+                collectionView.deleteItems(at: [indexPath])
             default:
                 break
             }
-            
-            collectionView.reloadData()
         }
         
         self.view.addSubview(collectionView)
@@ -64,6 +62,13 @@ extension RefillsController: UICollectionViewDelegate, UICollectionViewDelegateF
         return 0
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let editRefillController = RefillEditController(nibName: "RefillEditController", bundle: nil)
+        editRefillController.refill = viewModel.dataSource.value.data[indexPath.row]
+        editRefillController.editingMode = true
+        self.present(editRefillController, animated: true, completion: nil)
+    }
 }
 
 extension RefillsController: IndicatorInfoProvider {

@@ -7,9 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StationCreationView" customModule="FUELLY" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StationEditController" customModule="FUELLY" customModuleProvider="target">
             <connections>
                 <outlet property="addressField" destination="dZE-JO-PBp" id="Csh-1X-pfu"/>
+                <outlet property="deleteButton" destination="4DW-7w-TPz" id="TMJ-0S-kb5"/>
                 <outlet property="supplierField" destination="cGw-Vp-1cM" id="a1v-h7-Zoe"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -73,16 +74,26 @@
                         <action selector="save:" destination="-1" eventType="touchUpInside" id="Ty5-rr-rnX"/>
                     </connections>
                 </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4DW-7w-TPz">
+                    <rect key="frame" x="270" y="24" width="30" height="38.5"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" image="trash">
+                        <color key="titleColor" red="0.96078431369999995" green="0.85490196080000003" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </state>
+                </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="PSO-L5-7qt" firstAttribute="top" secondItem="SiW-Sx-SWw" secondAttribute="bottom" constant="8" id="2K3-wZ-x3O"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="m7Q-SS-xAX" secondAttribute="bottom" constant="20" id="A7K-Gl-fKg"/>
+                <constraint firstItem="4DW-7w-TPz" firstAttribute="top" secondItem="SiW-Sx-SWw" secondAttribute="top" id="Dj2-Zp-ogJ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cGw-Vp-1cM" secondAttribute="trailing" constant="16" id="E5p-Wf-MYr"/>
                 <constraint firstItem="m7Q-SS-xAX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="FnV-y3-XvY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4DW-7w-TPz" secondAttribute="trailing" constant="20" id="IXU-U6-CTo"/>
                 <constraint firstItem="cGw-Vp-1cM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Rdo-Kh-3KN"/>
                 <constraint firstItem="SiW-Sx-SWw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="24" id="Rn5-HK-TfL"/>
                 <constraint firstAttribute="trailing" secondItem="PSO-L5-7qt" secondAttribute="trailing" constant="16" id="ULh-Xu-kga"/>
+                <constraint firstItem="4DW-7w-TPz" firstAttribute="bottom" secondItem="SiW-Sx-SWw" secondAttribute="bottom" id="UXA-LX-G5G"/>
                 <constraint firstItem="cGw-Vp-1cM" firstAttribute="top" secondItem="H0b-Qe-WhX" secondAttribute="bottom" id="V13-cR-idy"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dZE-JO-PBp" secondAttribute="trailing" constant="16" id="YbE-JI-Ndi"/>
                 <constraint firstItem="H0b-Qe-WhX" firstAttribute="top" secondItem="PSO-L5-7qt" secondAttribute="bottom" constant="8" id="cUM-Cr-Ijh"/>
@@ -99,4 +110,7 @@
             <point key="canvasLocation" x="139" y="94"/>
         </view>
     </objects>
+    <resources>
+        <image name="trash" width="30" height="30"/>
+    </resources>
 </document>

@@ -18,7 +18,7 @@ final class RefillsService {
     let realm = try! Realm()
     
     func fetch(_ completion: @escaping ((Result<[Refill], Error>) -> Void)) {
-        completion((.success(Array(realm.objects(Refill.self)))))
+        completion((.success(Array(realm.objects(Refill.self).sorted(byKeyPath: "date", ascending: false)))))
     }
     
     func save(_ refill: Refill, _ completion: @escaping ((Result<Refill, Error>) -> Void)) {
@@ -28,8 +28,11 @@ final class RefillsService {
         }
     }
     
-    func delete(_ refill: Refill) {
-        
+    func delete(_ refill: Refill, _ completion: @escaping ((Result<Refill, Error>) -> Void)) {
+        try! realm.write {
+            realm.delete(refill)
+            completion(.success(refill))
+        }
     }
 }
 
