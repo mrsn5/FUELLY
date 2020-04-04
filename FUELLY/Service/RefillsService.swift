@@ -9,31 +9,10 @@
 import Foundation
 import RealmSwift
 
-final class RefillsService {
+final class RefillsService: GenericService<Refill> {
     
     static let shared = RefillsService()
     
-    
-    
-    let realm = try! Realm()
-    
-    func fetch(_ completion: @escaping ((Result<[Refill], Error>) -> Void)) {
-        completion((.success(Array(realm.objects(Refill.self).sorted(byKeyPath: "date", ascending: false)))))
-    }
-    
-    func save(_ refill: Refill, _ completion: @escaping ((Result<Refill, Error>) -> Void)) {
-        try! realm.write {
-            realm.add(refill)
-            completion(.success(refill))
-        }
-    }
-    
-    func delete(_ refill: Refill, _ completion: @escaping ((Result<Refill, Error>) -> Void)) {
-        try! realm.write {
-            realm.delete(refill)
-            completion(.success(refill))
-        }
-    }
 }
 
 
