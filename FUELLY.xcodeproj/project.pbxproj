@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		463A397B02716E5546F7F535 /* Pods_FUELLY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E68EE842A1EB01A1D7518E77 /* Pods_FUELLY.framework */; };
+		C3313CBC243B5133000649E0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C3313CBB243B5132000649E0 /* GoogleService-Info.plist */; };
 		C3548FF2243889870040FB26 /* DateFormatter+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3548FF1243889870040FB26 /* DateFormatter+.swift */; };
 		C3548FF424389A780040FB26 /* Realm+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3548FF324389A780040FB26 /* Realm+.swift */; };
-		C3548FF62438AB200040FB26 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C3548FF52438AB200040FB26 /* GoogleService-Info.plist */; };
 		C3548FF82438B08C0040FB26 /* FirestoreSyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3548FF72438B08C0040FB26 /* FirestoreSyncService.swift */; };
 		C3548FFA2438CC570040FB26 /* GenericService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3548FF92438CC570040FB26 /* GenericService.swift */; };
 		C3548FFE2438DA5C0040FB26 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3548FFD2438DA5C0040FB26 /* Constants.swift */; };
@@ -64,9 +64,9 @@
 /* Begin PBXFileReference section */
 		17D71796A4A21441805B34CC /* Pods-FUELLY.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FUELLY.debug.xcconfig"; path = "Target Support Files/Pods-FUELLY/Pods-FUELLY.debug.xcconfig"; sourceTree = "<group>"; };
 		B9CDCE30CDB6BE15CD246991 /* Pods-FUELLY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FUELLY.release.xcconfig"; path = "Target Support Files/Pods-FUELLY/Pods-FUELLY.release.xcconfig"; sourceTree = "<group>"; };
+		C3313CBB243B5132000649E0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C3548FF1243889870040FB26 /* DateFormatter+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+.swift"; sourceTree = "<group>"; };
 		C3548FF324389A780040FB26 /* Realm+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+.swift"; sourceTree = "<group>"; };
-		C3548FF52438AB200040FB26 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C3548FF72438B08C0040FB26 /* FirestoreSyncService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreSyncService.swift; sourceTree = "<group>"; };
 		C3548FF92438CC570040FB26 /* GenericService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericService.swift; sourceTree = "<group>"; };
 		C3548FFD2438DA5C0040FB26 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -225,7 +225,7 @@
 		C3D0244C2433D80F003D4D5C /* FUELLY */ = {
 			isa = PBXGroup;
 			children = (
-				C3548FF52438AB200040FB26 /* GoogleService-Info.plist */,
+				C3313CBB243B5132000649E0 /* GoogleService-Info.plist */,
 				C3D02474243490ED003D4D5C /* Extensions */,
 				C3D024662433DB52003D4D5C /* AppDelegate */,
 				C38DD0A424352D0D0079AAC5 /* Service */,
@@ -377,6 +377,7 @@
 			files = (
 				C38DD0BA24363B3D0079AAC5 /* MapStationView.xib in Resources */,
 				C3D024872434C918003D4D5C /* StationCell.xib in Resources */,
+				C3313CBC243B5133000649E0 /* GoogleService-Info.plist in Resources */,
 				C379B2122437A2C2009620BF /* AddNewCell.xib in Resources */,
 				C3ADB777243736C9007E935C /* LocationSearchTable.xib in Resources */,
 				C38DD0AB2435FF770079AAC5 /* RefillEditController.xib in Resources */,
@@ -388,7 +389,6 @@
 				C3D024572433D811003D4D5C /* Assets.xcassets in Resources */,
 				C379B20E24379D70009620BF /* StationPicker.xib in Resources */,
 				C3D024552433D80F003D4D5C /* Main.storyboard in Resources */,
-				C3548FF62438AB200040FB26 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
